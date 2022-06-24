@@ -1,0 +1,6 @@
+framework module Pods_QPlay {
+  umbrella header "Pods-QPlay-umbrella.h"
+
+  export *
+  module * { export * }
+}

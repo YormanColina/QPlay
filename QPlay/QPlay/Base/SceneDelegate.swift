@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,8 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        guard let windowScene = (scene as? UIWindowScene) else { return }
         
        let rootNavigationController = UINavigationController()
-        
-        rootNavigationController.setViewControllers([LoginViewController()], animated: true)
+        if GIDSignIn.sharedInstance.currentUser == nil {
+            let loginModule = LoginModule(navigation: rootNavigationController)
+            loginModule.start()
+        } else {
+            
+        }
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = rootNavigationController

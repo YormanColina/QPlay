@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17BD42152EAAF394C7FAB653 /* Pods_QPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9CE738AF421B305B38EE9C /* Pods_QPlay.framework */; };
+		18328C5E2864F0F100519E2C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C5D2864F0F100519E2C /* LoginPresenter.swift */; };
+		18328C602864F14600519E2C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C5F2864F14600519E2C /* LoginInteractor.swift */; };
+		18328C622864F1E200519E2C /* LoginRooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C612864F1E200519E2C /* LoginRooter.swift */; };
+		18328C642864F21200519E2C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C632864F21200519E2C /* HomePresenter.swift */; };
+		18328C662864F26300519E2C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C652864F26300519E2C /* HomeInteractor.swift */; };
+		18328C682864F29C00519E2C /* HomeRooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C672864F29C00519E2C /* HomeRooter.swift */; };
+		18328C6F2864F30100519E2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C6D2864F30100519E2C /* HomeViewController.swift */; };
+		18328C702864F30100519E2C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18328C6E2864F30100519E2C /* HomeViewController.xib */; };
+		18328C732864F31400519E2C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C712864F31400519E2C /* DetailViewController.swift */; };
+		18328C742864F31400519E2C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18328C722864F31400519E2C /* DetailViewController.xib */; };
+		18328C762864F35300519E2C /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C752864F35300519E2C /* DetailPresenter.swift */; };
+		18328C782864F38700519E2C /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C772864F38700519E2C /* DetailInteractor.swift */; };
+		18328C7A2864F3A800519E2C /* DetailRooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18328C792864F3A800519E2C /* DetailRooter.swift */; };
+		18328CFA2865097300519E2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18328CF92865097300519E2C /* GoogleService-Info.plist */; };
 		18F45C31286264B000069C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F45C30286264B000069C8E /* AppDelegate.swift */; };
 		18F45C33286264B000069C8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F45C32286264B000069C8E /* SceneDelegate.swift */; };
 		18F45C3A286264B400069C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F45C39286264B400069C8E /* Assets.xcassets */; };
@@ -19,6 +34,8 @@
 		18F45C7A2862674B00069C8E /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F45C792862674B00069C8E /* DetailModule.swift */; };
 		18F45C8428626A9600069C8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F45C8228626A9600069C8E /* LoginViewController.swift */; };
 		18F45C8528626A9600069C8E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F45C8328626A9600069C8E /* LoginViewController.xib */; };
+		9C0D8DA49121A901BB83459F /* Pods_QPlay_QPlayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDED14FF56A41EEAC959F44 /* Pods_QPlay_QPlayUITests.framework */; };
+		C33E0A73FF4A0B0491AECE3B /* Pods_QPlayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66A98B52C10208F3CAF14EC /* Pods_QPlayTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +56,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18328C5D2864F0F100519E2C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		18328C5F2864F14600519E2C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		18328C612864F1E200519E2C /* LoginRooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRooter.swift; sourceTree = "<group>"; };
+		18328C632864F21200519E2C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		18328C652864F26300519E2C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		18328C672864F29C00519E2C /* HomeRooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRooter.swift; sourceTree = "<group>"; };
+		18328C6D2864F30100519E2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		18328C6E2864F30100519E2C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		18328C712864F31400519E2C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18328C722864F31400519E2C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		18328C752864F35300519E2C /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		18328C772864F38700519E2C /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		18328C792864F3A800519E2C /* DetailRooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRooter.swift; sourceTree = "<group>"; };
+		18328CF92865097300519E2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18F45C2D286264B000069C8E /* QPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F45C30286264B000069C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F45C32286264B000069C8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +86,15 @@
 		18F45C792862674B00069C8E /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
 		18F45C8228626A9600069C8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18F45C8328626A9600069C8E /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		33725335976BAFB245FB13B1 /* Pods-QPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QPlay.debug.xcconfig"; path = "Target Support Files/Pods-QPlay/Pods-QPlay.debug.xcconfig"; sourceTree = "<group>"; };
+		4FDED14FF56A41EEAC959F44 /* Pods_QPlay_QPlayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QPlay_QPlayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A8EA6E4D36F7518C9016373 /* Pods-QPlay-QPlayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QPlay-QPlayUITests.release.xcconfig"; path = "Target Support Files/Pods-QPlay-QPlayUITests/Pods-QPlay-QPlayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		833856CD535A065C4A5D1720 /* Pods-QPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QPlay.release.xcconfig"; path = "Target Support Files/Pods-QPlay/Pods-QPlay.release.xcconfig"; sourceTree = "<group>"; };
+		96DC3003D754B685EA8483A2 /* Pods-QPlayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QPlayTests.release.xcconfig"; path = "Target Support Files/Pods-QPlayTests/Pods-QPlayTests.release.xcconfig"; sourceTree = "<group>"; };
+		AF9CE738AF421B305B38EE9C /* Pods_QPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66A98B52C10208F3CAF14EC /* Pods_QPlayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QPlayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E801F920BE904A4E30FAB5D5 /* Pods-QPlay-QPlayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QPlay-QPlayUITests.debug.xcconfig"; path = "Target Support Files/Pods-QPlay-QPlayUITests/Pods-QPlay-QPlayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCAAFCE8F1A073014941007E /* Pods-QPlayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QPlayTests.debug.xcconfig"; path = "Target Support Files/Pods-QPlayTests/Pods-QPlayTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BD42152EAAF394C7FAB653 /* Pods_QPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33E0A73FF4A0B0491AECE3B /* Pods_QPlayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +118,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0D8DA49121A901BB83459F /* Pods_QPlay_QPlayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186AB02B62DB5BEA968C421D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33725335976BAFB245FB13B1 /* Pods-QPlay.debug.xcconfig */,
+				833856CD535A065C4A5D1720 /* Pods-QPlay.release.xcconfig */,
+				E801F920BE904A4E30FAB5D5 /* Pods-QPlay-QPlayUITests.debug.xcconfig */,
+				5A8EA6E4D36F7518C9016373 /* Pods-QPlay-QPlayUITests.release.xcconfig */,
+				FCAAFCE8F1A073014941007E /* Pods-QPlayTests.debug.xcconfig */,
+				96DC3003D754B685EA8483A2 /* Pods-QPlayTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		18F45C24286264B000069C8E = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +145,8 @@
 				18F45C46286264B400069C8E /* QPlayTests */,
 				18F45C50286264B400069C8E /* QPlayUITests */,
 				18F45C2E286264B000069C8E /* Products */,
+				186AB02B62DB5BEA968C421D /* Pods */,
+				FC0AB9FB7F93307031A3AE3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				18F45C3E286264B400069C8E /* Info.plist */,
+				18328CF92865097300519E2C /* GoogleService-Info.plist */,
 				18F45C8128626A3600069C8E /* Resources */,
 				18F45C8028626A1000069C8E /* Base */,
 				18F45C602862658800069C8E /* Modules */,
@@ -189,6 +248,7 @@
 		18F45C6E2862669D00069C8E /* Rooter */ = {
 			isa = PBXGroup;
 			children = (
+				18328C612864F1E200519E2C /* LoginRooter.swift */,
 			);
 			path = Rooter;
 			sourceTree = "<group>";
@@ -196,6 +256,7 @@
 		18F45C6F286266A000069C8E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				18328C5F2864F14600519E2C /* LoginInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -203,6 +264,7 @@
 		18F45C70286266A300069C8E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				18328C5D2864F0F100519E2C /* LoginPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -226,6 +288,7 @@
 		18F45C752862670900069C8E /* Rooter */ = {
 			isa = PBXGroup;
 			children = (
+				18328C672864F29C00519E2C /* HomeRooter.swift */,
 			);
 			path = Rooter;
 			sourceTree = "<group>";
@@ -233,6 +296,7 @@
 		18F45C762862670B00069C8E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				18328C652864F26300519E2C /* HomeInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -240,6 +304,7 @@
 		18F45C772862670D00069C8E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				18328C632864F21200519E2C /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -247,6 +312,8 @@
 		18F45C782862671000069C8E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18328C6D2864F30100519E2C /* HomeViewController.swift */,
+				18328C6E2864F30100519E2C /* HomeViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +328,7 @@
 		18F45C7C2862675100069C8E /* Rooter */ = {
 			isa = PBXGroup;
 			children = (
+				18328C792864F3A800519E2C /* DetailRooter.swift */,
 			);
 			path = Rooter;
 			sourceTree = "<group>";
@@ -268,6 +336,7 @@
 		18F45C7D2862675300069C8E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				18328C772864F38700519E2C /* DetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -275,6 +344,7 @@
 		18F45C7E2862675500069C8E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				18328C752864F35300519E2C /* DetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -282,6 +352,8 @@
 		18F45C7F2862675800069C8E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18328C712864F31400519E2C /* DetailViewController.swift */,
+				18328C722864F31400519E2C /* DetailViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +376,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FC0AB9FB7F93307031A3AE3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF9CE738AF421B305B38EE9C /* Pods_QPlay.framework */,
+				4FDED14FF56A41EEAC959F44 /* Pods_QPlay_QPlayUITests.framework */,
+				E66A98B52C10208F3CAF14EC /* Pods_QPlayTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,9 +393,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18F45C57286264B400069C8E /* Build configuration list for PBXNativeTarget "QPlay" */;
 			buildPhases = (
+				F7DC93CC9E15A96FB88CC91C /* [CP] Check Pods Manifest.lock */,
 				18F45C29286264B000069C8E /* Sources */,
 				18F45C2A286264B000069C8E /* Frameworks */,
 				18F45C2B286264B000069C8E /* Resources */,
+				62CA2DDEE2D230613772025F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -328,6 +412,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18F45C5A286264B400069C8E /* Build configuration list for PBXNativeTarget "QPlayTests" */;
 			buildPhases = (
+				609B638AA93C465F5E512652 /* [CP] Check Pods Manifest.lock */,
 				18F45C3F286264B400069C8E /* Sources */,
 				18F45C40286264B400069C8E /* Frameworks */,
 				18F45C41286264B400069C8E /* Resources */,
@@ -346,9 +431,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18F45C5D286264B400069C8E /* Build configuration list for PBXNativeTarget "QPlayUITests" */;
 			buildPhases = (
+				D1E437E8A06F603A1A752BC6 /* [CP] Check Pods Manifest.lock */,
 				18F45C49286264B400069C8E /* Sources */,
 				18F45C4A286264B400069C8E /* Frameworks */,
 				18F45C4B286264B400069C8E /* Resources */,
+				48460C4B373AD9E6AF0C0D58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,7 +497,10 @@
 			files = (
 				18F45C8528626A9600069C8E /* LoginViewController.xib in Resources */,
 				18F45C3D286264B400069C8E /* LaunchScreen.storyboard in Resources */,
+				18328C742864F31400519E2C /* DetailViewController.xib in Resources */,
 				18F45C3A286264B400069C8E /* Assets.xcassets in Resources */,
+				18328C702864F30100519E2C /* HomeViewController.xib in Resources */,
+				18328CFA2865097300519E2C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,17 +520,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48460C4B373AD9E6AF0C0D58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QPlay-QPlayUITests/Pods-QPlay-QPlayUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QPlay-QPlayUITests/Pods-QPlay-QPlayUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QPlay-QPlayUITests/Pods-QPlay-QPlayUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		609B638AA93C465F5E512652 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QPlayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62CA2DDEE2D230613772025F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QPlay/Pods-QPlay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QPlay/Pods-QPlay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QPlay/Pods-QPlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1E437E8A06F603A1A752BC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QPlay-QPlayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7DC93CC9E15A96FB88CC91C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QPlay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18F45C29286264B000069C8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				18F45C8428626A9600069C8E /* LoginViewController.swift in Sources */,
+				18328C662864F26300519E2C /* HomeInteractor.swift in Sources */,
 				18F45C31286264B000069C8E /* AppDelegate.swift in Sources */,
+				18328C5E2864F0F100519E2C /* LoginPresenter.swift in Sources */,
 				18F45C7A2862674B00069C8E /* DetailModule.swift in Sources */,
+				18328C602864F14600519E2C /* LoginInteractor.swift in Sources */,
+				18328C642864F21200519E2C /* HomePresenter.swift in Sources */,
+				18328C682864F29C00519E2C /* HomeRooter.swift in Sources */,
+				18328C762864F35300519E2C /* DetailPresenter.swift in Sources */,
 				18F45C732862670200069C8E /* HomeModule.swift in Sources */,
 				18F45C33286264B000069C8E /* SceneDelegate.swift in Sources */,
 				18F45C65286265C100069C8E /* LoginModule.swift in Sources */,
+				18328C7A2864F3A800519E2C /* DetailRooter.swift in Sources */,
+				18328C6F2864F30100519E2C /* HomeViewController.swift in Sources */,
+				18328C622864F1E200519E2C /* LoginRooter.swift in Sources */,
+				18328C732864F31400519E2C /* DetailViewController.swift in Sources */,
+				18328C782864F38700519E2C /* DetailInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +808,7 @@
 		};
 		18F45C58286264B400069C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33725335976BAFB245FB13B1 /* Pods-QPlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -611,9 +816,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QPlay/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = HomeViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -631,6 +836,7 @@
 		};
 		18F45C59286264B400069C8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 833856CD535A065C4A5D1720 /* Pods-QPlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -638,9 +844,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QPlay/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = HomeViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -658,6 +864,7 @@
 		};
 		18F45C5B286264B400069C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCAAFCE8F1A073014941007E /* Pods-QPlayTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -677,6 +884,7 @@
 		};
 		18F45C5C286264B400069C8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96DC3003D754B685EA8483A2 /* Pods-QPlayTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -696,6 +904,7 @@
 		};
 		18F45C5E286264B400069C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E801F920BE904A4E30FAB5D5 /* Pods-QPlay-QPlayUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -713,6 +922,7 @@
 		};
 		18F45C5F286264B400069C8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A8EA6E4D36F7518C9016373 /* Pods-QPlay-QPlayUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

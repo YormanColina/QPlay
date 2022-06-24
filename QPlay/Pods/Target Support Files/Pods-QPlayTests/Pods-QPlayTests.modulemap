@@ -1,0 +1,6 @@
+framework module Pods_QPlayTests {
+  umbrella header "Pods-QPlayTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

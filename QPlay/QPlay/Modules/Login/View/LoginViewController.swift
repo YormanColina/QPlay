@@ -8,7 +8,15 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    init() {
+        super.init(nibName: String(describing: LoginViewController.self), bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
