@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class LoginModule {
-    let presenter: LoginPresenterProtocol?
+    let presenter: LoginPresenterProtocol
     
     init(navigation: UINavigationController) {
         let interactor: LoginInteractorProtocol = LoginInteractor()
@@ -19,7 +19,7 @@ class LoginModule {
     }
     
     func start() {
-        presenter?.showModule()
+        presenter.showModule()
     }
 }
 
