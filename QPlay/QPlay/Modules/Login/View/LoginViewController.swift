@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     // MARK: Properties
     
     private let presenter: LoginPresenterProtocol
+    private let disposeBag = DisposeBag()
     
     // MARK: Initializers
     
@@ -36,10 +37,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        subscribeToAuthUser()
         setupUI()
     }
     
     // MARK: Methods
+    
+    private func subscribeToAuthUser() {
+        presenter.authObservable.subscribe(onNext: { result in
+            if result {
+                self.presenter.presentHome()
+            }
+        }, onError: { error in
+            print(error.localizedDescription)
+        })
+        .disposed(by: disposeBag)
+    }
     
     private func setupUI() {
         loginButtom.layer.cornerRadius = loginButtom.bounds.height / 2
@@ -71,12 +84,10 @@ class LoginViewController: UIViewController {
     //MARK: IBActions
     
     @IBAction func login(_ sender: Any) {
-        presenter.googleSignIn { result in
-            if result {
-                self.presenter.presentHome()
-            }
-        }
+        presenter.googleSignIn()
     }
+    
+    
 }
 
 

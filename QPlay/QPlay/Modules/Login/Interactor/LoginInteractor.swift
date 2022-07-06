@@ -18,6 +18,7 @@ protocol LoginInteractorProtocol {
 
 class LoginInteractor: LoginInteractorProtocol {
     let config : GIDConfiguration = GIDConfiguration.init(clientID: "698440841281-t8ec0f966ns54gaanhfklnfn02114tuk.apps.googleusercontent.com")
+    let firebaseAuthSubject = PublishSubject<Bool>()
     
     func authenticateUser(user: GIDGoogleUser) -> Observable<Bool> {
         return Observable.create { observer in
@@ -35,6 +36,21 @@ class LoginInteractor: LoginInteractorProtocol {
             
             return Disposables.create()
         }
+    }
+    
+    func authenticateUserRx(user: GIDGoogleUser) {
+        
+            guard  let idToken = user.authentication.idToken else {
+                firebaseAuthSubject.on(.error(RxError.unknown))
+                return
+            }
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                           accessToken: user.authentication.accessToken)
+            
+            Auth.auth().signIn(with: credential) { success, error in
+                self.firebaseAuthSubject.on(.next(error == nil))
+            }
     }
 }
 

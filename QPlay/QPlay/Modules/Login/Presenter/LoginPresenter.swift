@@ -13,18 +13,24 @@ import GoogleSignIn
 
 protocol LoginPresenterProtocol {
     func showModule()
-    func googleSignIn(completion: @escaping (Bool) -> Void)
+    func googleSignIn()
     func presentHome()
+    var authObservable: Observable<Bool> { get }
 }
 
 class LoginPresenter: LoginPresenterProtocol {
     private let disposeBag = DisposeBag()
     private let interactor: LoginInteractorProtocol
     private let router: LoginRouterProtocol
+    private let subject: PublishSubject<Bool>
+    var authObservable: Observable<Bool> {
+        return subject
+    }
     
     init(interactor: LoginInteractorProtocol, router: LoginRouterProtocol) {
         self.interactor = interactor
         self.router = router
+        self.subject = PublishSubject<Bool>()
     }
     
     func showModule() {
@@ -35,13 +41,13 @@ class LoginPresenter: LoginPresenterProtocol {
         router.showModuleHome()
     }
     
-    func googleSignIn(completion: @escaping (Bool) -> Void) {
+    func googleSignIn() {
         router.showGoogleViewRx(config: interactor.config).subscribe(onNext: { (user) in
-            self.authenticateUser(user: user) { authenticate in
-                completion(authenticate)
+            self.authenticateUser(user: user) { authenticated in
+                self.subject.on(.next(authenticated))
             }
         }, onError: { (error) in
-            print(error.localizedDescription)
+            self.subject.on(.error(RxError.unknown))
         }).disposed(by: disposeBag)
     }
     
