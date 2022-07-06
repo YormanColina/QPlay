@@ -9,15 +9,18 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import GoogleSignIn
+import RxCocoa
+import RxSwift
 
 protocol LoginRouterProtocol {
-    var navigationController: UINavigationController { get set }
     func presentLogin(presenter: LoginPresenterProtocol)
     func showGoogleView(config: GIDConfiguration, viewController: UIViewController, completion: @escaping (GIDGoogleUser?) -> Void)
+    func showGoogleViewRx(config: GIDConfiguration) -> Observable<GIDGoogleUser>
     func showModuleHome()
 }
 
 class LoginRooter: LoginRouterProtocol {
+    
     var navigationController: UINavigationController
     
     init(_ navigationController: UINavigationController) {
@@ -43,4 +46,24 @@ class LoginRooter: LoginRouterProtocol {
         homeModule.startHome()
     }
     
+    func showGoogleViewRx(config: GIDConfiguration) -> Observable<GIDGoogleUser> {
+        return Observable.create { observer in
+            guard let viewController = self.navigationController.viewControllers.first else {
+                observer.onError(RxError.noElements)
+                return Disposables.create()
+            }
+            
+            GIDSignIn.sharedInstance.signIn(with: config, presenting: viewController) { user, _ in
+                guard let user = user else {
+                    observer.on(.error(RxError.noElements))
+                    return
+                }
+                
+                observer.on(.next(user))
+                observer.on(.completed)
+            }
+                                
+            return Disposables.create()
+        }
+    }
 }

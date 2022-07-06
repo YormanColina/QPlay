@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class LoginViewController: UIViewController {
     // MARK: IBOutlets
@@ -65,12 +67,13 @@ class LoginViewController: UIViewController {
     
     }
     
+    
     //MARK: IBActions
     
     @IBAction func login(_ sender: Any) {
-        presenter.googleSignIn(viewController: self) { result in
+        presenter.googleSignIn { result in
             if result {
-               self.presenter.presentHome()
+                self.presenter.presentHome()
             }
         }
     }

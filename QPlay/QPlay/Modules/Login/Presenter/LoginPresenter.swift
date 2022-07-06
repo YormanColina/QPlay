@@ -7,18 +7,20 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
+import GoogleSignIn
 
 protocol LoginPresenterProtocol {
-    var interactor: LoginInteractorProtocol { get set }
-    var router: LoginRouterProtocol { get set }
     func showModule()
-    func googleSignIn(viewController: UIViewController, completion: @escaping (Bool) -> Void)
+    func googleSignIn(completion: @escaping (Bool) -> Void)
     func presentHome()
 }
 
 class LoginPresenter: LoginPresenterProtocol {
-    var interactor: LoginInteractorProtocol
-    var router: LoginRouterProtocol
+    private let disposeBag = DisposeBag()
+    private let interactor: LoginInteractorProtocol
+    private let router: LoginRouterProtocol
     
     init(interactor: LoginInteractorProtocol, router: LoginRouterProtocol) {
         self.interactor = interactor
@@ -29,20 +31,34 @@ class LoginPresenter: LoginPresenterProtocol {
         router.presentLogin(presenter: self)
     }
     
-    func googleSignIn(viewController: UIViewController, completion: @escaping (Bool) -> Void) {
-        router.showGoogleView(config: interactor.config, viewController: viewController) { user in
-            guard let user = user else {
-                completion(false)
-                return
-            }
-            self.interactor.authenticateUser(user: user) { authenticated in
-               completion(authenticated)
-            }
-        }
-    }
-    
     func presentHome() {
         router.showModuleHome()
     }
     
+    func googleSignIn(completion: @escaping (Bool) -> Void) {
+        router.showGoogleViewRx(config: interactor.config).subscribe(onNext: { (user) in
+            self.authenticateUser(user: user) { authenticate in
+                completion(authenticate)
+            }
+        }, onError: { (error) in
+            print(error.localizedDescription)
+        }).disposed(by: disposeBag)
+    }
+    
+    
+    func authenticateUser(user: GIDGoogleUser, completion: @escaping (Bool) -> Void)  {
+        interactor.authenticateUser(user: user)
+            .subscribe { event in
+                completion(event)
+            } onError: { error in
+                print(error.localizedDescription)
+            }.disposed(by: disposeBag)
+    }
+    
+    func ObservableView() -> Observable<Bool> {
+        return Observable.create { observer in
+           
+            return Disposables.create()
+        }
+    }
 }
