@@ -12,10 +12,11 @@ import RxCocoa
 import GoogleSignIn
 
 protocol LoginPresenterProtocol {
+    var authObservable: Observable<Bool> { get }
     func showModule()
     func googleSignIn()
     func presentHome()
-    var authObservable: Observable<Bool> { get }
+    func googleSignInOperators() -> Observable<Bool>
 }
 
 class LoginPresenter: LoginPresenterProtocol {
@@ -41,23 +42,27 @@ class LoginPresenter: LoginPresenterProtocol {
         router.showModuleHome()
     }
     
+    func googleSignInOperators() -> Observable<Bool> {
+        return router
+            .showGoogleViewRx(config: interactor.config)
+            .flatMap { (user) in self.interactor.authenticateUser(user: user)}
+    }
+    
     func googleSignIn() {
         router.showGoogleViewRx(config: interactor.config).subscribe(onNext: { (user) in
-            self.authenticateUser(user: user) { authenticated in
-                self.subject.on(.next(authenticated))
-            }
+            self.authenticateUser(user: user)
         }, onError: { (error) in
             self.subject.on(.error(RxError.unknown))
         }).disposed(by: disposeBag)
     }
     
     
-    func authenticateUser(user: GIDGoogleUser, completion: @escaping (Bool) -> Void)  {
+    func authenticateUser(user: GIDGoogleUser)  {
         interactor.authenticateUser(user: user)
             .subscribe { event in
-                completion(event)
+                self.subject.on(.next(event))
             } onError: { error in
-                print(error.localizedDescription)
+                self.subject.on(.error(RxError.unknown))
             }.disposed(by: disposeBag)
     }
     

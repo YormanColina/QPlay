@@ -84,7 +84,11 @@ class LoginViewController: UIViewController {
     //MARK: IBActions
     
     @IBAction func login(_ sender: Any) {
-        presenter.googleSignIn()
+        presenter.googleSignInOperators()
+            .subscribe(onNext: { (success) in
+                guard success else { return }
+                self.presenter.presentHome()
+            }).disposed(by: disposeBag)
     }
     
     

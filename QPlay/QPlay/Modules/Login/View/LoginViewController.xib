@@ -74,6 +74,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="XlV-tK-wfa"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jfM-mH-1Sr">
                     <rect key="frame" x="253" y="825" width="25" height="25"/>
