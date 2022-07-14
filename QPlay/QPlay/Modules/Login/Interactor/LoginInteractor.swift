@@ -39,12 +39,10 @@ class LoginInteractor: LoginInteractorProtocol {
     }
     
     func authenticateUserRx(user: GIDGoogleUser) {
-        
             guard  let idToken = user.authentication.idToken else {
                 firebaseAuthSubject.on(.error(RxError.unknown))
                 return
             }
-            
             let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                            accessToken: user.authentication.accessToken)
             

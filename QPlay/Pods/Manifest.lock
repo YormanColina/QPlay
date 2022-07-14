@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.6.1)
   - AppAuth (1.5.0):
     - AppAuth/Core (= 1.5.0)
     - AppAuth/ExternalUserAgent (= 1.5.0)
@@ -51,11 +52,13 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.1)
+  - Kingfisher (7.2.1)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - ObjectMapper (3.5.3)
   - PromisesObjC (2.1.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
@@ -65,13 +68,17 @@ PODS:
   - RxSwift (6.5.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Firebase/Auth
   - GoogleSignIn
+  - Kingfisher (~> 7.0)
+  - ObjectMapper (~> 3.5)
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - AppAuth
     - Firebase
     - FirebaseAuth
@@ -82,13 +89,16 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
+    - Kingfisher
     - nanopb
+    - ObjectMapper
     - PromisesObjC
     - RxCocoa
     - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
   Firebase: 5f8193dff4b5b7c5d5ef72ae54bb76c08e2b841d
   FirebaseAuth: 3e73bf8abf4fbb40f8b421f361f4cc48ee57388c
@@ -99,12 +109,14 @@ SPEC CHECKSUMS:
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   GTMAppAuth: 987526d41b07efb1bedda5e936fe0cb718a03113
   GTMSessionFetcher: 4577a4cc914a5a07c40a8a0ad0acc22080418c2d
+  Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 6119e5542a6be7fb69117b124954ec98da049d81
+PODFILE CHECKSUM: 31a9ef62c44ae61619389da5b2bd99a560cf0087
 
 COCOAPODS: 1.11.3

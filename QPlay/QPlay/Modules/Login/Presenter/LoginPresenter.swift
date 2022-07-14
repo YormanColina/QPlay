@@ -65,11 +65,5 @@ class LoginPresenter: LoginPresenterProtocol {
                 self.subject.on(.error(RxError.unknown))
             }.disposed(by: disposeBag)
     }
-    
-    func ObservableView() -> Observable<Bool> {
-        return Observable.create { observer in
-           
-            return Disposables.create()
-        }
-    }
+
 }

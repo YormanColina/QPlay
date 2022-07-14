@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomeRooterProtocol {
-    func presentHome()
+    func presentHome(presenter: HomePresenterProtocol)
 }
 
 class HomeRooter: HomeRooterProtocol {
@@ -19,8 +19,8 @@ class HomeRooter: HomeRooterProtocol {
         self.base = base
     }
     
-    func presentHome() {
-        base.pushViewController(HomeViewController(), animated: true)
+    func presentHome(presenter: HomePresenterProtocol) {
+        base.pushViewController(HomeViewController(presenter: presenter), animated: true)
     }
 }
 

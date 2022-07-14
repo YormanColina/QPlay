@@ -14,7 +14,7 @@ protocol HomeModuleProtocol {
 }
 
 class HomeModule: HomeModuleProtocol {
-    var presenter: HomePresenterProtocol
+    let presenter: HomePresenterProtocol
     
     init(base: UINavigationController) {
         let router: HomeRooterProtocol = HomeRooter(base: base)
