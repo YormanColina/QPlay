@@ -8,22 +8,20 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    private let presenter: DetailPresenterProtocol
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    init(presenter: DetailPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: String(describing: DetailViewController.self), bundle: nil)
     }
-    */
-
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="QPlay" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Eyw-Y9-WzH" id="jAY-P8-9df"/>
+                <outlet property="containerTabBarView" destination="F70-cL-lfY" id="1AI-1D-XLL"/>
+                <outlet property="tabBarView" destination="tlR-MA-B9O" id="sIy-UE-Wen"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,19 +32,47 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F70-cL-lfY">
+                    <rect key="frame" x="20" y="803.5" width="374" height="49"/>
+                    <subviews>
+                        <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlR-MA-B9O">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <items>
+                                <tabBarItem systemItem="favorites" id="e3u-RH-8am"/>
+                                <tabBarItem title="Item" id="VbH-dC-yVL"/>
+                                <tabBarItem title="Item" id="gBl-zy-Yue"/>
+                                <tabBarItem title="Item" id="aTs-Ke-Msx"/>
+                            </items>
+                        </tabBar>
+                    </subviews>
+                    <color key="backgroundColor" name="superDarkGray"/>
+                    <constraints>
+                        <constraint firstItem="tlR-MA-B9O" firstAttribute="leading" secondItem="F70-cL-lfY" secondAttribute="leading" id="Ab2-pq-56G"/>
+                        <constraint firstItem="tlR-MA-B9O" firstAttribute="top" secondItem="F70-cL-lfY" secondAttribute="top" id="OPc-2U-lFp"/>
+                        <constraint firstAttribute="bottom" secondItem="tlR-MA-B9O" secondAttribute="bottom" id="hC5-8S-fYB"/>
+                        <constraint firstAttribute="trailing" secondItem="tlR-MA-B9O" secondAttribute="trailing" id="hct-H9-wkU"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Eyw-Y9-WzH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="32z-PE-CRZ"/>
+                <constraint firstItem="F70-cL-lfY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8il-U5-gcM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Eyw-Y9-WzH" secondAttribute="bottom" id="FtW-gF-V2v"/>
                 <constraint firstItem="Eyw-Y9-WzH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wi1-fW-L3X"/>
+                <constraint firstItem="F70-cL-lfY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="380" id="XMT-5C-nPq"/>
+                <constraint firstAttribute="trailing" secondItem="F70-cL-lfY" secondAttribute="trailing" constant="20" id="l90-FZ-CWq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Eyw-Y9-WzH" secondAttribute="trailing" id="mDk-NU-ahn"/>
             </constraints>
             <point key="canvasLocation" x="139" y="102"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="superDarkGray">
+            <color red="0.12549019607843137" green="0.12549019607843137" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

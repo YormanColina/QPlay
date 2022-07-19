@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeRooterProtocol {
     func presentHome(presenter: HomePresenterProtocol)
+    func showModuleDetail()
 }
 
 class HomeRooter: HomeRooterProtocol {
@@ -21,6 +22,11 @@ class HomeRooter: HomeRooterProtocol {
     
     func presentHome(presenter: HomePresenterProtocol) {
         base.pushViewController(HomeViewController(presenter: presenter), animated: true)
+    }
+    
+    func showModuleDetail() {
+        let detailModule = DetailModule(base: base)
+        detailModule.startDetail()
     }
 }
 

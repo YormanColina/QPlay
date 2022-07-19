@@ -9,25 +9,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderHomeView" id="U6b-Vx-4bR" customClass="HeaderHomeView" customModule="QPlay" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZA-q1-Jf0">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-Gf-aQF">
+                    <rect key="frame" x="30" y="0.0" width="290" height="50"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="rZA-q1-Jf0" secondAttribute="bottom" id="2np-U9-Xrk"/>
-                <constraint firstAttribute="trailing" secondItem="rZA-q1-Jf0" secondAttribute="trailing" id="YgA-Qd-mUc"/>
-                <constraint firstItem="rZA-q1-Jf0" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="eiZ-RG-g0b"/>
-                <constraint firstItem="rZA-q1-Jf0" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="r6O-wn-f20"/>
+                <constraint firstAttribute="trailing" secondItem="Qef-Gf-aQF" secondAttribute="trailing" id="FHR-ng-gye"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="Qef-Gf-aQF" secondAttribute="bottom" id="RQD-0C-kXe"/>
+                <constraint firstItem="Qef-Gf-aQF" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="cvM-Ug-SSg"/>
+                <constraint firstItem="Qef-Gf-aQF" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="30" id="jAe-vE-wUx"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="87"/>
+            <connections>
+                <outlet property="titleHeader" destination="Qef-Gf-aQF" id="QBQ-oS-J4u"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="84"/>
         </collectionReusableView>
     </objects>
 </document>

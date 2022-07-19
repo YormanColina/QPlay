@@ -21,7 +21,6 @@ class GamesViewCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowRadius = 5
         layer.shadowOpacity = 0.3
         layer.shadowOffset = CGSize(width: 3, height: 5)

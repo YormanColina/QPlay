@@ -10,10 +10,9 @@ import RxSwift
 import RxCocoa
 
 protocol HomePresenterProtocol {
-    var interactor: HomeInteractorProtocol { get set }
-    var router: HomeRooterProtocol { get set}
     func showModule()
     func callservices() -> Observable<[Game]>
+    func presentDetail()
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -33,4 +32,10 @@ class HomePresenter: HomePresenterProtocol {
         let observable = interactor.makeRequest()
         return observable
     }
+    
+    func presentDetail() {
+        router.showModuleDetail()
+    }
+    
+    
 }
