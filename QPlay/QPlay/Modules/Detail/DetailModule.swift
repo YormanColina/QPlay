@@ -27,5 +27,4 @@ class DetailModule {
         presenter.showModule()
     }
     
-    
 }

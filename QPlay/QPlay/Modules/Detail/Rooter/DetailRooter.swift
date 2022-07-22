@@ -13,7 +13,7 @@ protocol DetailRooterProtocol {
 }
 
 class DetailRooter: DetailRooterProtocol {
-    var navigationController: UINavigationController
+    private var navigationController: UINavigationController
     
     init(base: UINavigationController) {
         navigationController = base

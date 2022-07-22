@@ -28,6 +28,7 @@ class CollectionCell: UICollectionViewCell {
         collectionView.register(UINib(nibName: "GamesViewCell", bundle: nil), forCellWithReuseIdentifier: "GamesViewCell")
         collectionView.register(UINib(nibName: "SeenCell", bundle: nil), forCellWithReuseIdentifier: "SeenCell")
         collectionView.backgroundColor = UIColor(named: "darkBlue")
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
     }
     
     override func awakeFromNib() {
@@ -74,18 +75,16 @@ extension CollectionCell: UICollectionViewDataSource {
 // MARK: UICollectionViewDelegateFlowLayout
 extension CollectionCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch indexPath.section {
+        switch self.section {
         case 0:
-           return CGSize(width: 250, height: 350)
+           return CGSize(width: 250, height: 320)
         default:
-            return CGSize(width: 150, height: 120)
+            return CGSize(width: 260, height: 100)
         }
-    
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 25
     }
 }
 

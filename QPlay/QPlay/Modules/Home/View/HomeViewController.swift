@@ -11,8 +11,8 @@ import RxSwift
 class HomeViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet weak var containerTabBarView: UIView!
-    @IBOutlet weak var tabBarView: UITabBar!
+    @IBOutlet private weak var containerTabBarView: UIView!
+    @IBOutlet private weak var tabBarView: UITabBar!
     
     // MARK: Properties
     private let presenter: HomePresenterProtocol
@@ -40,11 +40,11 @@ class HomeViewController: UIViewController {
     }
     
     private func takeInformation() {
-        presenter.callservices()
+        presenter.getHome()
             .subscribe { [weak self] games in
-                guard let games = games.element else { return }
-                self?.games = games
-                self?.collectionView.reloadData()
+                guard let self = self, let games = games.element else { return }
+                self.games = games
+                self.collectionView.reloadData()
             }.disposed(by: disposeBag)
     }
     
@@ -58,8 +58,10 @@ class HomeViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = UIColor(named: "darkBlue")
         collectionView.backgroundColor = UIColor(named: "darkBlue")
-        containerTabBarView.layer.cornerRadius = 30
+        tabBarView.barTintColor = UIColor(named: "superDarkGray")
+        
         tabBarView.layer.cornerRadius = 20
+        tabBarView.layer.masksToBounds = true
     }
     
 }
@@ -87,10 +89,10 @@ extension HomeViewController: UICollectionViewDataSource {
         
         switch indexPath.section {
         case 0 :
-            header.configureHeader(text: "Explore new release movies", fontSize: 38, color: .white)
+            header.configureHeader(text: "Explore new release movies", fontSize: 31, color: .white)
             return header
         default:
-            header.configureHeader(text: "Continue Watching", fontSize: 17, color: .lightGray)
+            header.configureHeader(text: "Continue Watching", fontSize: 17, color: .white)
             return header
         }
         
@@ -106,14 +108,14 @@ extension HomeViewController: UICollectionViewDelegate {
     
 }
 
-// MARK:
+// MARK: UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
-            return CGSize(width: UIScreen.main.bounds.width, height: 350)
+            return CGSize(width: UIScreen.main.bounds.width, height: 320)
         default:
-            return CGSize(width: UIScreen.main.bounds.width, height: 120)
+            return CGSize(width: UIScreen.main.bounds.width, height: 100)
         }
     }
     
@@ -122,14 +124,14 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         case 0:
             return CGSize(width: UIScreen.main.bounds.width, height: 150)
         default:
-            return CGSize(width: UIScreen.main.bounds.width, height: 70)
+            return CGSize(width: UIScreen.main.bounds.width, height: 75)
         }
     }
 }
 
+// MARK: CollectionCellProtocol
 extension HomeViewController: CollectionCellProtocol {
     func showDetail() {
-        
         presenter.presentDetail()
     }
 }

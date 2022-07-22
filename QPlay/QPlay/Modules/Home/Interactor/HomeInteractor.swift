@@ -17,7 +17,6 @@ protocol HomeInteractorProtocol {
 
 class HomeInteractor: HomeInteractorProtocol {
     private let apiServices: String = "https://gamestream-api.herokuapp.com/api/games"
-    var games: [Game] = []
     
     func makeRequest() -> Observable<[Game]> {
         return Observable.create { observer in
@@ -29,6 +28,7 @@ class HomeInteractor: HomeInteractorProtocol {
                 let games = Mapper<Game>().mapArray(JSONArray: json)
                 
                 observer.on(.next(games))
+                observer.onCompleted()
             }
             return Disposables.create()
         }

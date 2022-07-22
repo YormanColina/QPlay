@@ -11,15 +11,15 @@ import RxCocoa
 
 protocol HomePresenterProtocol {
     func showModule()
-    func callservices() -> Observable<[Game]>
+    func getHome() -> Observable<[Game]>
     func presentDetail()
 }
 
 class HomePresenter: HomePresenterProtocol {
-    var interactor: HomeInteractorProtocol
-    var router: HomeRooterProtocol
+    private let interactor: HomeInteractorProtocol
+    private let router: HomeRouterProtocol
     
-    init(interactor: HomeInteractorProtocol, router: HomeRooterProtocol) {
+    init(interactor: HomeInteractorProtocol, router: HomeRouterProtocol) {
         self.interactor = interactor
         self.router = router
     }
@@ -28,7 +28,7 @@ class HomePresenter: HomePresenterProtocol {
         router.presentHome(presenter: self)
     }
     
-    func callservices() -> Observable<[Game]> {
+    func getHome() -> Observable<[Game]> {
         let observable = interactor.makeRequest()
         return observable
     }
@@ -36,6 +36,5 @@ class HomePresenter: HomePresenterProtocol {
     func presentDetail() {
         router.showModuleDetail()
     }
-    
     
 }

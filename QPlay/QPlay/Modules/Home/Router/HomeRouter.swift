@@ -8,20 +8,20 @@
 import Foundation
 import UIKit
 
-protocol HomeRooterProtocol {
+protocol HomeRouterProtocol {
     func presentHome(presenter: HomePresenterProtocol)
     func showModuleDetail()
 }
 
-class HomeRooter: HomeRooterProtocol {
-    var base: UINavigationController
+class HomeRouter: HomeRouterProtocol {
+    private var base: UINavigationController
     
     init(base: UINavigationController) {
         self.base = base
     }
     
     func presentHome(presenter: HomePresenterProtocol) {
-        base.pushViewController(HomeViewController(presenter: presenter), animated: true)
+        base.setViewControllers([HomeViewController(presenter: presenter)], animated: true)
     }
     
     func showModuleDetail() {

@@ -275,7 +275,7 @@
 				18F45C71286266A800069C8E /* View */,
 				18F45C70286266A300069C8E /* Presenter */,
 				18F45C6F286266A000069C8E /* Interactor */,
-				18F45C6E2862669D00069C8E /* Rooter */,
+				18F45C6E2862669D00069C8E /* Router */,
 				18F45C6D2862669A00069C8E /* Entities */,
 			);
 			path = Login;
@@ -288,7 +288,7 @@
 				18F45C782862671000069C8E /* View */,
 				18F45C772862670D00069C8E /* Presenter */,
 				18F45C762862670B00069C8E /* Interactor */,
-				18F45C752862670900069C8E /* Rooter */,
+				18F45C752862670900069C8E /* Router */,
 				18F45C742862670600069C8E /* Entities */,
 			);
 			path = Home;
@@ -314,12 +314,12 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		18F45C6E2862669D00069C8E /* Rooter */ = {
+		18F45C6E2862669D00069C8E /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				18328C612864F1E200519E2C /* LoginRouter.swift */,
 			);
-			path = Rooter;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		18F45C6F286266A000069C8E /* Interactor */ = {
@@ -356,12 +356,12 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		18F45C752862670900069C8E /* Rooter */ = {
+		18F45C752862670900069C8E /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				18328C672864F29C00519E2C /* HomeRouter.swift */,
 			);
-			path = Rooter;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		18F45C762862670B00069C8E /* Interactor */ = {

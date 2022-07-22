@@ -19,22 +19,23 @@ class SeenCell: UICollectionViewCell {
         super.awakeFromNib()
         setupUI()
     }
+    
     private func setupUI() {
-        containerButtonView.layer.cornerRadius = containerButtonView.bounds.width / 2
-        titleLabel.textColor = .white
-        timeLabel.textColor = .lightGray
-        
-        layer.shadowOpacity = 0.9
-        layer.shadowOffset = CGSize(width: 3, height: 5)
-        layer.masksToBounds = false
+        layer.masksToBounds = true
         layer.cornerRadius = 20
         layer.borderWidth = 0.3
-        layer.borderColor = UIColor.darkGray.cgColor
+        layer.borderColor = UIColor(named: "superDarkGray")?.cgColor
         
         contentView.layer.cornerRadius = 20
         contentView.layer.masksToBounds = true
         imageViewButton.contentMode = .scaleAspectFill
+        self.backgroundColor = UIColor(named: "superDarkGray")
         
+        cellImageView.layer.cornerRadius = 12
+        
+        containerButtonView.layer.cornerRadius = containerButtonView.bounds.width / 2
+        titleLabel.textColor = .white
+        timeLabel.textColor = .lightGray
     }
     
     func configurateCell(game: Game) {
@@ -44,3 +45,4 @@ class SeenCell: UICollectionViewCell {
     }
 
 }
+

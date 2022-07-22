@@ -15,7 +15,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
     }
 
-
     init(presenter: DetailPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: String(describing: DetailViewController.self), bundle: nil)

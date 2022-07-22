@@ -9,15 +9,14 @@ import Foundation
 import UIKit
 
 protocol HomeModuleProtocol {
-    var presenter: HomePresenterProtocol { get }
     func startHome()
 }
 
 class HomeModule: HomeModuleProtocol {
-    let presenter: HomePresenterProtocol
+    private let presenter: HomePresenterProtocol
     
     init(base: UINavigationController) {
-        let router: HomeRooterProtocol = HomeRooter(base: base)
+        let router: HomeRouterProtocol = HomeRouter(base: base)
         let interactor: HomeInteractorProtocol = HomeInteractor()
         let presenter: HomePresenterProtocol = HomePresenter(interactor: interactor, router: router)
         self.presenter = presenter
