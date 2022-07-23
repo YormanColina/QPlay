@@ -36,12 +36,15 @@ class SeenCell: UICollectionViewCell {
         containerButtonView.layer.cornerRadius = containerButtonView.bounds.width / 2
         titleLabel.textColor = .white
         timeLabel.textColor = .lightGray
+        
+        imageViewButton.image = UIImage(named: "play")?.withRenderingMode(.alwaysTemplate)
+        imageViewButton.tintColor = .white
     }
     
     func configurateCell(game: Game) {
         titleLabel.text = game.title
         timeLabel.text = game.studio
-        cellImageView.kf.setImage(with: URL(string: game.galleryImages[1]))
+        cellImageView.kf.setImage(with: URL(string: game.galleryImages[0]))
     }
 
 }

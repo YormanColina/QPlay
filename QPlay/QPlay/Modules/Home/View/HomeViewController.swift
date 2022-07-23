@@ -55,13 +55,61 @@ class HomeViewController: UIViewController {
         collectionView.register(UINib(nibName: "HeaderHomeView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: "HeaderHomeView")
     }
     
+    private func setupTransparentNagigatioNBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        navigationItem.compactAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.standardAppearance = appearance
+    }
+    
+    private func customizingNavigationBar(image: UIImage, imageWidth: CGFloat, imageHeight: CGFloat) -> UIBarButtonItem {
+        let buttonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        let leftImageView = UIImageView(frame: .zero)
+        
+        leftImageView.translatesAutoresizingMaskIntoConstraints = false
+        leftImageView.widthAnchor.constraint(equalToConstant: imageWidth - 5).isActive = true
+        leftImageView.heightAnchor.constraint(equalToConstant: imageHeight - 5).isActive = true
+        leftImageView.contentMode = .scaleAspectFit
+        
+        leftView.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        leftView.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        leftView.layer.borderColor = UIColor.lightGray.cgColor
+        leftView.layer.borderWidth = 0.3
+        
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        leftView.backgroundColor = .clear
+        leftView.addSubview(leftImageView)
+        leftView.addSubview(button)
+        leftView.layer.cornerRadius = 21
+        leftImageView.tintColor = .white
+        leftImageView.image = image
+        leftImageView.leadingAnchor.constraint(equalTo: leftView.leadingAnchor, constant: 14).isActive = true
+        leftImageView.topAnchor.constraint(equalTo: leftView.topAnchor, constant: 14).isActive = true
+        button.topAnchor.constraint(equalTo: leftView.topAnchor).isActive = true
+        button.leadingAnchor.constraint(equalTo: leftView.leadingAnchor).isActive = true
+        button.trailingAnchor.constraint(equalTo: leftView.trailingAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo: leftView.bottomAnchor).isActive = true
+        buttonItem.customView = leftView
+
+        return buttonItem
+    }
+    
     private func setupUI() {
         view.backgroundColor = UIColor(named: "darkBlue")
         collectionView.backgroundColor = UIColor(named: "darkBlue")
         tabBarView.barTintColor = UIColor(named: "superDarkGray")
         
-        tabBarView.layer.cornerRadius = 20
+        tabBarView.layer.cornerRadius = 30
         tabBarView.layer.masksToBounds = true
+        setupTransparentNagigatioNBar()
+        let image = UIImage(named: "bars")?.withRenderingMode(.alwaysTemplate)
+        let image2 = UIImage(named: "search")?.withRenderingMode(.alwaysTemplate)
+        
+        navigationItem.leftBarButtonItem = customizingNavigationBar(image: image!, imageWidth: 20, imageHeight: 20)
+        navigationItem.rightBarButtonItem = customizingNavigationBar(image: image2!, imageWidth: 20, imageHeight: 20)
     }
     
 }
@@ -89,7 +137,7 @@ extension HomeViewController: UICollectionViewDataSource {
         
         switch indexPath.section {
         case 0 :
-            header.configureHeader(text: "Explore new release movies", fontSize: 31, color: .white)
+            header.configureHeader(text: "Explore new release movies", fontSize: 30, color: .white)
             return header
         default:
             header.configureHeader(text: "Continue Watching", fontSize: 17, color: .white)
@@ -113,7 +161,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
-            return CGSize(width: UIScreen.main.bounds.width, height: 320)
+            return CGSize(width: UIScreen.main.bounds.width, height: 340)
         default:
             return CGSize(width: UIScreen.main.bounds.width, height: 100)
         }
@@ -124,8 +172,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         case 0:
             return CGSize(width: UIScreen.main.bounds.width, height: 150)
         default:
-            return CGSize(width: UIScreen.main.bounds.width, height: 75)
+            return CGSize(width: UIScreen.main.bounds.width, height: 50)
         }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 200
     }
 }
 

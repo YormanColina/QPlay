@@ -20,50 +20,51 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0uL-8M-htl">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="409"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jE-GB-4uL">
-                        <rect key="frame" x="5" y="294" width="325" height="110"/>
+                        <rect key="frame" x="5" y="264" width="325" height="140"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tA-YY-Jkb">
-                                <rect key="frame" x="0.0" y="0.0" width="325" height="110"/>
+                                <rect key="frame" x="0.0" y="0.0" width="325" height="140"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sKz-HI-YpC">
-                                    <rect key="frame" x="0.0" y="0.0" width="325" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="325" height="140"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-jz-za4">
-                                            <rect key="frame" x="10" y="10" width="130" height="20.5"/>
+                                            <rect key="frame" x="10" y="40" width="130" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="130" id="wPK-sU-Nyn"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v5-uu-ew9">
-                                            <rect key="frame" x="10" y="38.5" width="31" height="14.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <rect key="frame" x="10" y="69.5" width="33" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" systemColor="systemGray2Color"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGd-dg-nVl">
-                                            <rect key="frame" x="268" y="15" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5(879)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGd-dg-nVl">
+                                            <rect key="frame" x="257" y="43" width="53" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" name="customYellow"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wl0-9W-pGE">
-                                            <rect key="frame" x="238" y="14.5" width="20" height="20"/>
+                                            <rect key="frame" x="234" y="41.5" width="18" height="18"/>
                                             <color key="tintColor" name="customYellow"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="Wdj-oi-LcG"/>
-                                                <constraint firstAttribute="height" constant="20" id="qFO-Ac-ehj"/>
+                                                <constraint firstAttribute="width" constant="18" id="Wdj-oi-LcG"/>
+                                                <constraint firstAttribute="height" constant="18" id="qFO-Ac-ehj"/>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdb-KW-yNK">
-                                            <rect key="frame" x="265" y="56" width="40" height="40"/>
+                                            <rect key="frame" x="265" y="79" width="40" height="40"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NE2-rb-1XX">
-                                                    <rect key="frame" x="12.5" y="14" width="15" height="11.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NE2-rb-1XX">
+                                                    <rect key="frame" x="12.5" y="12.5" width="15" height="15"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -83,15 +84,15 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2v5-uu-ew9" firstAttribute="top" secondItem="eJx-jz-za4" secondAttribute="bottom" constant="8" id="7vK-mv-hqj"/>
-                                        <constraint firstItem="QGd-dg-nVl" firstAttribute="top" secondItem="sKz-HI-YpC" secondAttribute="top" constant="15" id="IeC-GK-s8q"/>
-                                        <constraint firstItem="QGd-dg-nVl" firstAttribute="leading" secondItem="Wl0-9W-pGE" secondAttribute="trailing" constant="10" id="NMU-4i-MoH"/>
+                                        <constraint firstItem="QGd-dg-nVl" firstAttribute="leading" secondItem="Wl0-9W-pGE" secondAttribute="trailing" constant="5" id="NMU-4i-MoH"/>
                                         <constraint firstItem="Gdb-KW-yNK" firstAttribute="top" secondItem="QGd-dg-nVl" secondAttribute="bottom" constant="20" id="NPd-6q-fDt"/>
+                                        <constraint firstItem="QGd-dg-nVl" firstAttribute="centerY" secondItem="Wl0-9W-pGE" secondAttribute="centerY" id="Nkr-6Q-Icw"/>
                                         <constraint firstItem="eJx-jz-za4" firstAttribute="leading" secondItem="sKz-HI-YpC" secondAttribute="leading" constant="10" id="RTo-NP-VSS"/>
                                         <constraint firstAttribute="trailing" secondItem="Gdb-KW-yNK" secondAttribute="trailing" constant="20" id="Zvp-y1-TYT"/>
+                                        <constraint firstItem="Wl0-9W-pGE" firstAttribute="centerY" secondItem="eJx-jz-za4" secondAttribute="centerY" id="a2d-2Q-bD3"/>
                                         <constraint firstAttribute="trailing" secondItem="QGd-dg-nVl" secondAttribute="trailing" constant="15" id="aVt-6N-B0e"/>
                                         <constraint firstItem="2v5-uu-ew9" firstAttribute="leading" secondItem="sKz-HI-YpC" secondAttribute="leading" constant="10" id="bU0-64-cvm"/>
-                                        <constraint firstItem="eJx-jz-za4" firstAttribute="top" secondItem="sKz-HI-YpC" secondAttribute="top" constant="10" id="hK3-eT-gAZ"/>
-                                        <constraint firstItem="Wl0-9W-pGE" firstAttribute="top" secondItem="sKz-HI-YpC" secondAttribute="top" constant="15" id="rI9-RB-ag1"/>
+                                        <constraint firstItem="eJx-jz-za4" firstAttribute="top" secondItem="sKz-HI-YpC" secondAttribute="top" constant="40" id="hK3-eT-gAZ"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
@@ -103,7 +104,7 @@
                             <constraint firstItem="0tA-YY-Jkb" firstAttribute="leading" secondItem="0jE-GB-4uL" secondAttribute="leading" id="7cA-HU-J0P"/>
                             <constraint firstAttribute="trailing" secondItem="0tA-YY-Jkb" secondAttribute="trailing" id="bFC-YU-KyD"/>
                             <constraint firstAttribute="bottom" secondItem="0tA-YY-Jkb" secondAttribute="bottom" id="fmY-7V-E1w"/>
-                            <constraint firstAttribute="height" constant="110" id="yFd-dz-6Mr"/>
+                            <constraint firstAttribute="height" constant="140" id="yFd-dz-6Mr"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -124,6 +125,7 @@
                 <outlet property="cellImage" destination="0uL-8M-htl" id="LU3-EL-2vN"/>
                 <outlet property="containerPlayerButtonView" destination="Gdb-KW-yNK" id="WpG-hp-UO7"/>
                 <outlet property="containerView" destination="0jE-GB-4uL" id="70e-5r-AeF"/>
+                <outlet property="playImageView" destination="NE2-rb-1XX" id="438-py-4Dr"/>
                 <outlet property="studio" destination="2v5-uu-ew9" id="1Bq-1c-TMd"/>
                 <outlet property="titleLabel" destination="eJx-jz-za4" id="7Qd-Ta-OUv"/>
             </connections>
@@ -131,7 +133,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="customPurple">
             <color red="0.45098039215686275" green="0.24705882352941178" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -141,6 +142,9 @@
         </namedColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
