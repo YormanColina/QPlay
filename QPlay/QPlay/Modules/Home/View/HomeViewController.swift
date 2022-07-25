@@ -55,6 +55,21 @@ class HomeViewController: UIViewController {
         collectionView.register(UINib(nibName: "HeaderHomeView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: "HeaderHomeView")
     }
     
+    private func setupUI() {
+        setupTransparentNagigatioNBar()
+        view.backgroundColor = UIColor(named: "darkBlue")
+        collectionView.backgroundColor = UIColor(named: "darkBlue")
+        tabBarView.barTintColor = UIColor(named: "superDarkGray")
+        tabBarView.layer.cornerRadius = 30
+        tabBarView.layer.masksToBounds = true
+        
+        let image = UIImage(named: "bars")?.withRenderingMode(.alwaysTemplate)
+        let image2 = UIImage(named: "search")?.withRenderingMode(.alwaysTemplate)
+        
+        navigationItem.leftBarButtonItem = customizingNavigationBar(image: image!, imageWidth: 20, imageHeight: 20)
+        navigationItem.rightBarButtonItem = customizingNavigationBar(image: image2!, imageWidth: 20, imageHeight: 20)
+    }
+    
     private func setupTransparentNagigatioNBar() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
@@ -97,21 +112,6 @@ class HomeViewController: UIViewController {
         return buttonItem
     }
     
-    private func setupUI() {
-        view.backgroundColor = UIColor(named: "darkBlue")
-        collectionView.backgroundColor = UIColor(named: "darkBlue")
-        tabBarView.barTintColor = UIColor(named: "superDarkGray")
-        
-        tabBarView.layer.cornerRadius = 30
-        tabBarView.layer.masksToBounds = true
-        setupTransparentNagigatioNBar()
-        let image = UIImage(named: "bars")?.withRenderingMode(.alwaysTemplate)
-        let image2 = UIImage(named: "search")?.withRenderingMode(.alwaysTemplate)
-        
-        navigationItem.leftBarButtonItem = customizingNavigationBar(image: image!, imageWidth: 20, imageHeight: 20)
-        navigationItem.rightBarButtonItem = customizingNavigationBar(image: image2!, imageWidth: 20, imageHeight: 20)
-    }
-    
 }
 
 // MARK: UICollectionViewDataSource
@@ -126,7 +126,6 @@ extension HomeViewController: UICollectionViewDataSource {
         }
         cell.delegate = self
         cell.configureCellInfo(games: games, section: indexPath.section)
-        
         return cell
     }
     
@@ -140,14 +139,14 @@ extension HomeViewController: UICollectionViewDataSource {
             header.configureHeader(text: "Explore new release movies", fontSize: 30, color: .white)
             return header
         default:
-            header.configureHeader(text: "Continue Watching", fontSize: 17, color: .white)
+            header.configureHeader(text: "Continue Watching", fontSize: 16, color: .white)
             return header
         }
         
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
 }
 
@@ -182,7 +181,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: CollectionCellProtocol
 extension HomeViewController: CollectionCellProtocol {
+    func saveInLocalStorage(title: String) {
+        presenter.saveGameSenn(title: title)
+    }
+    
     func showDetail() {
         presenter.presentDetail()
+        collectionView.reloadData()
     }
 }

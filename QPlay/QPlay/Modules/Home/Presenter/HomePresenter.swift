@@ -13,6 +13,7 @@ protocol HomePresenterProtocol {
     func showModule()
     func getHome() -> Observable<[Game]>
     func presentDetail()
+    func saveGameSenn(title: String)
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -35,6 +36,10 @@ class HomePresenter: HomePresenterProtocol {
     
     func presentDetail() {
         router.showModuleDetail()
+    }
+    
+    func saveGameSenn(title: String) {
+        interactor.savedInUserDefaults(title: title)
     }
     
 }

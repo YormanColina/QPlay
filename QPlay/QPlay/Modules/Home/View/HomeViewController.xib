@@ -34,16 +34,19 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F70-cL-lfY">
-                    <rect key="frame" x="10" y="808" width="394" height="70"/>
+                    <rect key="frame" x="10" y="801" width="394" height="70"/>
                     <subviews>
                         <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlR-MA-B9O">
-                            <rect key="frame" x="0.0" y="-10" width="394" height="80"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="70"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <items>
-                                <tabBarItem image="paperplane" catalog="system" id="e3u-RH-8am">
+                                <tabBarItem title="" id="e3u-RH-8am">
+                                    <imageReference key="image" image="pencil" catalog="system" symbolScale="default"/>
+                                    <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                                     <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-1"/>
+                                    <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-35"/>
                                 </tabBarItem>
-                                <tabBarItem title="" image="play.circle" catalog="system" id="VbH-dC-yVL">
+                                <tabBarItem title="                    " image="play.circle" catalog="system" id="VbH-dC-yVL">
                                     <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <imageReference key="selectedImage" image="play.circle" catalog="system" symbolScale="default"/>
                                 </tabBarItem>
@@ -57,7 +60,7 @@
                     <constraints>
                         <constraint firstItem="tlR-MA-B9O" firstAttribute="leading" secondItem="F70-cL-lfY" secondAttribute="leading" id="Ab2-pq-56G"/>
                         <constraint firstAttribute="height" constant="70" id="N9V-tf-yYA"/>
-                        <constraint firstItem="tlR-MA-B9O" firstAttribute="top" secondItem="F70-cL-lfY" secondAttribute="top" constant="-10" id="OPc-2U-lFp"/>
+                        <constraint firstItem="tlR-MA-B9O" firstAttribute="top" secondItem="F70-cL-lfY" secondAttribute="top" id="OPc-2U-lFp"/>
                         <constraint firstAttribute="bottom" secondItem="tlR-MA-B9O" secondAttribute="bottom" id="hC5-8S-fYB"/>
                         <constraint firstAttribute="trailing" secondItem="tlR-MA-B9O" secondAttribute="trailing" id="hct-H9-wkU"/>
                     </constraints>
@@ -68,9 +71,9 @@
             <constraints>
                 <constraint firstItem="Eyw-Y9-WzH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="32z-PE-CRZ"/>
                 <constraint firstItem="F70-cL-lfY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="8il-U5-gcM"/>
+                <constraint firstAttribute="bottom" secondItem="F70-cL-lfY" secondAttribute="bottom" constant="25" id="Cga-hW-xdc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Eyw-Y9-WzH" secondAttribute="bottom" id="FtW-gF-V2v"/>
                 <constraint firstItem="Eyw-Y9-WzH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wi1-fW-L3X"/>
-                <constraint firstItem="F70-cL-lfY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="395" id="XMT-5C-nPq"/>
                 <constraint firstAttribute="trailing" secondItem="F70-cL-lfY" secondAttribute="trailing" constant="10" id="l90-FZ-CWq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Eyw-Y9-WzH" secondAttribute="trailing" id="mDk-NU-ahn"/>
             </constraints>
@@ -79,7 +82,7 @@
     </objects>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="paperplane" catalog="system" width="128" height="118"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <namedColor name="superDarkGray">

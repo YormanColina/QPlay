@@ -13,10 +13,13 @@ import ObjectMapper
 
 protocol HomeInteractorProtocol {
     func makeRequest() -> Observable<[Game]>
+    func savedInUserDefaults(title: String)
 }
 
 class HomeInteractor: HomeInteractorProtocol {
     private let apiServices: String = "https://gamestream-api.herokuapp.com/api/games"
+    private let storageKey = "seenGames"
+    private let userDefault = UserDefaults.standard
     
     func makeRequest() -> Observable<[Game]> {
         return Observable.create { observer in
@@ -31,6 +34,15 @@ class HomeInteractor: HomeInteractorProtocol {
                 observer.onCompleted()
             }
             return Disposables.create()
+        }
+    }
+    
+    func savedInUserDefaults(title: String) {
+        var savedTitles = userDefault.object(forKey: storageKey) as? [String] ?? [String]()
+        
+        if !savedTitles.contains(title) {
+            savedTitles.append(title)
+            userDefault.set(savedTitles, forKey: storageKey)
         }
     }
 }

@@ -147,6 +147,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18612E7E288F385D002448D0 /* Home Module */ = {
+			isa = PBXGroup;
+			children = (
+				18F45C722862670200069C8E /* HomeModule.swift */,
+			);
+			path = "Home Module";
+			sourceTree = "<group>";
+		};
+		18612E7F288F386C002448D0 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				18F45C64286265C100069C8E /* LoginModule.swift */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		18612E80288F387E002448D0 /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				18F45C792862674B00069C8E /* DetailModule.swift */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
 		186AB02B62DB5BEA968C421D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,7 +295,7 @@
 		18F45C612862659200069C8E /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				18F45C64286265C100069C8E /* LoginModule.swift */,
+				18612E7F288F386C002448D0 /* LoginModule */,
 				18F45C71286266A800069C8E /* View */,
 				18F45C70286266A300069C8E /* Presenter */,
 				18F45C6F286266A000069C8E /* Interactor */,
@@ -284,7 +308,7 @@
 		18F45C622862659E00069C8E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				18F45C722862670200069C8E /* HomeModule.swift */,
+				18612E7E288F385D002448D0 /* Home Module */,
 				18F45C782862671000069C8E /* View */,
 				18F45C772862670D00069C8E /* Presenter */,
 				18F45C762862670B00069C8E /* Interactor */,
@@ -297,7 +321,7 @@
 		18F45C63286265A700069C8E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				18F45C792862674B00069C8E /* DetailModule.swift */,
+				18612E80288F387E002448D0 /* DetailModule */,
 				18F45C7F2862675800069C8E /* View */,
 				18F45C7E2862675500069C8E /* Presenter */,
 				18F45C7D2862675300069C8E /* Interactor */,

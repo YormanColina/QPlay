@@ -9,6 +9,7 @@ import UIKit
 
 protocol CollectionCellProtocol: AnyObject {
     func showDetail()
+    func saveInLocalStorage(title: String)
 }
 
 class CollectionCell: UICollectionViewCell {
@@ -18,9 +19,9 @@ class CollectionCell: UICollectionViewCell {
     // MARK: Properties
     private var games: [Game] = []
     private var section: Int = 0
+    private var seenGames: [Game] = []
     weak var delegate: CollectionCellProtocol?
-    
-    
+  
     // MARK: Methods
     private func configureCollection() {
         collectionView.delegate = self
@@ -57,13 +58,20 @@ extension CollectionCell: UICollectionViewDataSource {
             guard let cell = registerCell(with: "SeenCell", indexPath: indexPath) as? SeenCell else {
                 return UICollectionViewCell()
             }
-            cell.configurateCell(game: games[indexPath.row])
+            if seenGames.count > 0 {
+                cell.configurateCell(game: seenGames[indexPath.row])
+            }
             return cell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return games.count
+        switch self.section {
+        case 0:
+            return games.count
+        default:
+            return seenGames.count
+        }
     }
     
     private func registerCell(with identifier: String, indexPath: IndexPath) -> UICollectionViewCell {
@@ -91,6 +99,7 @@ extension CollectionCell: UICollectionViewDelegateFlowLayout {
 // MARK: UICollectionViewDelegate
 extension CollectionCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.saveInLocalStorage(title: games[indexPath.row].title)
         delegate?.showDetail()
     }
 }
