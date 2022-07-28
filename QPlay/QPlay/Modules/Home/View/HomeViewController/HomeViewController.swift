@@ -125,7 +125,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.delegate = self
-        cell.configureCellInfo(games: games, section: indexPath.section)
+        cell.configureCellInfo(games: games, section: indexPath.section,seenGames: presenter.seenGames())
         return cell
     }
     
@@ -146,7 +146,8 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        guard presenter.seenGames().count > 0 else { return 1 }
+        return 2
     }
 }
 
@@ -181,7 +182,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: CollectionCellProtocol
 extension HomeViewController: CollectionCellProtocol {
-    func saveInLocalStorage(title: String) {
+    func saveGame(title: String) {
         presenter.saveGameSenn(title: title)
     }
     
