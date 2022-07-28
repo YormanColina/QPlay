@@ -12,9 +12,11 @@ import RxCocoa
 protocol HomePresenterProtocol {
     func showModule()
     func getHome() -> Observable<[Game]>
-    func presentDetail()
+    func presentDetail(game: Game)
     func saveGameSenn(title: String)
+    func seenGames() -> [String]
 }
+
 
 class HomePresenter: HomePresenterProtocol {
     private let interactor: HomeInteractorProtocol
@@ -34,12 +36,16 @@ class HomePresenter: HomePresenterProtocol {
         return observable
     }
     
-    func presentDetail() {
-        router.showModuleDetail()
+    func presentDetail(game: Game) {
+        router.showModuleDetail(game: game)
     }
     
     func saveGameSenn(title: String) {
-        interactor.savedInUserDefaults(title: title)
+        interactor.savedGameInUserDefaults(title: title)
+    }
+    
+    func seenGames() -> [String] {
+        return interactor.searchSeenGames()
     }
     
 }

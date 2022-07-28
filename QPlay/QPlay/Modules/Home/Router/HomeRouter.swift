@@ -10,7 +10,7 @@ import UIKit
 
 protocol HomeRouterProtocol {
     func presentHome(presenter: HomePresenterProtocol)
-    func showModuleDetail()
+    func showModuleDetail(game: Game)
 }
 
 class HomeRouter: HomeRouterProtocol {
@@ -24,8 +24,8 @@ class HomeRouter: HomeRouterProtocol {
         base.setViewControllers([HomeViewController(presenter: presenter)], animated: true)
     }
     
-    func showModuleDetail() {
-        let detailModule = DetailModule(base: base)
+    func showModuleDetail(game: Game) {
+        let detailModule = DetailModule(base: base, game: game)
         detailModule.startDetail()
     }
 }

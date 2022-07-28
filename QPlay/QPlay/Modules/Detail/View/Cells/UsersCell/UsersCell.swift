@@ -9,12 +9,20 @@ import UIKit
 
 class UsersCell: UICollectionViewCell {
 
+    @IBOutlet weak var imageUser: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupCell()
     }
     
     func configureCell(game: Game) {
         
+    }
+    
+    private func setupCell() {
+        imageUser.layer.cornerRadius = imageUser.bounds.width / 2
+        imageUser.layer.borderColor = UIColor.white.cgColor
+        imageUser.layer.borderWidth = 0.2
     }
 }

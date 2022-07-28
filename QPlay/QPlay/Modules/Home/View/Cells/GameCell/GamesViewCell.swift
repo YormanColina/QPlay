@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 class GamesViewCell: UICollectionViewCell {
+    // MARK: @IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var studio: UILabel!
     @IBOutlet private weak var containerView: UIView!
@@ -17,6 +18,7 @@ class GamesViewCell: UICollectionViewCell {
     @IBOutlet weak var blurEfect: UIVisualEffectView!
     @IBOutlet weak var playImageView: UIImageView!
     
+    // MARK: Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         layoutIfNeeded()

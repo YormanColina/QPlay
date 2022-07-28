@@ -8,8 +8,8 @@
 import UIKit
 
 protocol CollectionCellProtocol: AnyObject {
-    func showDetail()
-    func saveInLocalStorage(title: String)
+    func showDetail(game: Game)
+    func saveGame(title: String)
 }
 
 class CollectionCell: UICollectionViewCell {
@@ -19,11 +19,12 @@ class CollectionCell: UICollectionViewCell {
     // MARK: Properties
     private var games: [Game] = []
     private var section: Int = 0
-    private var seenGames: [Game] = []
+    private var seenGames: [String] = []
     weak var delegate: CollectionCellProtocol?
   
     // MARK: Methods
     private func configureCollection() {
+        collectionView.collectionViewLayout = HomeFlowLayout()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "GamesViewCell", bundle: nil), forCellWithReuseIdentifier: "GamesViewCell")
@@ -37,9 +38,10 @@ class CollectionCell: UICollectionViewCell {
         configureCollection()
     }
     
-    func configureCellInfo(games: [Game], section: Int) {
+    func configureCellInfo(games: [Game], section: Int, seenGames: [String]) {
         self.games = games
         self.section = section
+        self.seenGames = seenGames
         collectionView.reloadData()
     }
     
@@ -58,8 +60,15 @@ extension CollectionCell: UICollectionViewDataSource {
             guard let cell = registerCell(with: "SeenCell", indexPath: indexPath) as? SeenCell else {
                 return UICollectionViewCell()
             }
-            if seenGames.count > 0 {
-                cell.configurateCell(game: seenGames[indexPath.row])
+            var filterArrayGame: [Game] = []
+            
+            if games.count > 0 {
+                for title in seenGames {
+                    if let gameIndex = games.firstIndex(where: { game in game.title == title }) {
+                        filterArrayGame.append(games[gameIndex])
+                    }
+                }
+                cell.configurateCell(game: filterArrayGame[indexPath.row], loaderState: true)
             }
             return cell
         }
@@ -99,8 +108,8 @@ extension CollectionCell: UICollectionViewDelegateFlowLayout {
 // MARK: UICollectionViewDelegate
 extension CollectionCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.saveInLocalStorage(title: games[indexPath.row].title)
-        delegate?.showDetail()
+        delegate?.saveGame(title: games[indexPath.row].title)
+        delegate?.showDetail(game: games[indexPath.row])
     }
 }
 

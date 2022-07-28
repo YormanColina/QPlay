@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 protocol DetailRooterProtocol {
-    func showDetail()
+    func showDetail(game: Game)
+    func popDetail() 
 }
 
 class DetailRooter: DetailRooterProtocol {
@@ -19,8 +20,12 @@ class DetailRooter: DetailRooterProtocol {
         navigationController = base
     }
     
-    func showDetail() {
-        let detailModule = DetailModule(base: navigationController)
-        navigationController.pushViewController(DetailViewController(presenter: detailModule.presenter), animated: true)
+    func showDetail(game: Game) {
+        let detailModule = DetailModule(base: navigationController, game: game)
+        navigationController.pushViewController(DetailViewController(presenter: detailModule.presenter, game: game), animated: true)
+    }
+    
+    func popDetail() {
+        navigationController.popViewController(animated: true)
     }
 }

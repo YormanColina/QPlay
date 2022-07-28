@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 protocol DetailPresenterProtocol {
-    func showModule()
+    func showModule(game: Game)
+    func popDetail()
 }
 
 class DetailPresenter: DetailPresenterProtocol {
@@ -21,7 +22,11 @@ class DetailPresenter: DetailPresenterProtocol {
         self.router = router
     }
     
-    func showModule() {
-        router.showDetail()
+    func showModule(game: Game) {
+        router.showDetail(game: game)
+    }
+    
+    func popDetail() {
+        router.popDetail()
     }
 }

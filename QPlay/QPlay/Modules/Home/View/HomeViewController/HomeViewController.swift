@@ -48,11 +48,17 @@ class HomeViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     private func configureCollection() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "CollectionCell", bundle: nil), forCellWithReuseIdentifier: "CollectionCell")
         collectionView.register(UINib(nibName: "HeaderHomeView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: "HeaderHomeView")
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
     }
     
     private func setupUI() {
@@ -186,8 +192,8 @@ extension HomeViewController: CollectionCellProtocol {
         presenter.saveGameSenn(title: title)
     }
     
-    func showDetail() {
-        presenter.presentDetail()
+    func showDetail(game: Game) {
+        presenter.presentDetail(game: game)
         collectionView.reloadData()
     }
 }
