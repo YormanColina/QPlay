@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+protocol GamesViewCellDelegate: AnyObject {
+    func playVideo(url: String)
+}
+
 class GamesViewCell: UICollectionViewCell {
     // MARK: @IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
@@ -17,6 +21,10 @@ class GamesViewCell: UICollectionViewCell {
     @IBOutlet private weak var containerPlayerButtonView: UIView!
     @IBOutlet weak var blurEfect: UIVisualEffectView!
     @IBOutlet weak var playImageView: UIImageView!
+    @IBOutlet weak var playVideoButton: UIButton!
+    
+    weak var delegate: GamesViewCellDelegate?
+    private var url: String?
     
     // MARK: Methods
     override func awakeFromNib() {
@@ -52,6 +60,7 @@ class GamesViewCell: UICollectionViewCell {
         titleLabel?.text = game.title
         studio?.text = game.studio
         cellImage.kf.setImage(with: URL(string: game.galleryImages[1]))
+        self.url = game.videosUrls.mobile
     }
     
     private func createMask() -> CAShapeLayer {
@@ -80,4 +89,8 @@ class GamesViewCell: UICollectionViewCell {
         return mask
     }
 
+    @IBAction func playVideo(_ sender: Any) {
+        guard let url = url else { return }
+        delegate?.playVideo(url: url)
+    }
 }

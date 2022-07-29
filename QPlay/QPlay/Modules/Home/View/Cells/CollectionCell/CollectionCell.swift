@@ -10,6 +10,7 @@ import UIKit
 protocol CollectionCellProtocol: AnyObject {
     func showDetail(game: Game)
     func saveGame(title: String)
+    func playVideo(url: String)
 }
 
 class CollectionCell: UICollectionViewCell {
@@ -54,12 +55,14 @@ extension CollectionCell: UICollectionViewDataSource {
             guard let cell = registerCell(with: "GamesViewCell", indexPath: indexPath) as? GamesViewCell else {
                 return UICollectionViewCell()
             }
+            cell.delegate = self
             cell.configureCell(game: games[indexPath.row])
             return cell
         default:
             guard let cell = registerCell(with: "SeenCell", indexPath: indexPath) as? SeenCell else {
                 return UICollectionViewCell()
             }
+            cell.delegate = self
             var filterArrayGame: [Game] = []
             
             if games.count > 0 {
@@ -110,6 +113,18 @@ extension CollectionCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.saveGame(title: games[indexPath.row].title)
         delegate?.showDetail(game: games[indexPath.row])
+    }
+}
+
+extension CollectionCell: GamesViewCellDelegate {
+    func playVideo(url: String) {
+        delegate?.playVideo(url: url )
+    }
+}
+
+extension CollectionCell: SeenCellDelegate {
+    func playSeenVideo(url: String) {
+        delegate?.playVideo(url: url)
     }
 }
 

@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+protocol SeenCellDelegate: AnyObject {
+    func playSeenVideo(url: String)
+}
+
 class SeenCell: UICollectionViewCell {
     //MARK: @IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
@@ -19,6 +23,8 @@ class SeenCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabelLoaderView: UIView!
     @IBOutlet private weak var cellImageLoaderView: UIView!
     
+    weak var delegate: SeenCellDelegate?
+    private var videoUrl: String?
     
     // MARK: Methods
     override func awakeFromNib() {
@@ -61,7 +67,12 @@ class SeenCell: UICollectionViewCell {
         titleLabelLoaderView.isHidden = loaderState
         studioLabelLoaderView.isHidden = loaderState
         cellImageLoaderView.isHidden = loaderState
+        videoUrl = game.videosUrls.mobile
     }
 
+    @IBAction func playVideo(_ sender: Any) {
+        guard let videoUrl = videoUrl else { return }
+        delegate?.playSeenVideo(url: videoUrl)
+    }
 }
 

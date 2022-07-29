@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import AVKit
 
 class DetailViewController: UIViewController {
     
@@ -65,6 +66,10 @@ class DetailViewController: UIViewController {
         detailImageView.contentMode = .scaleAspectFill
         
         playNowButton.layer.cornerRadius = 35
+    }
+    @IBAction func playVideo(_ sender: Any) {
+        print(game.videosUrls.tablet)
+        presenter.playVideo(with: game.videosUrls.mobile)
     }
     @IBAction func popDetail() {
         presenter.popDetail()
@@ -135,7 +140,7 @@ extension DetailViewController: UICollectionViewDelegateFlowLayout {
         case 1:
             return CGSize(width: UIScreen.main.bounds.width - 60, height: 50)
         default:
-            return CGSize(width: UIScreen.main.bounds.width - 60, height: 200)
+            return CGSize(width: UIScreen.main.bounds.width - 60, height: 870)
         }
     }
     

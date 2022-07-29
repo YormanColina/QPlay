@@ -14,12 +14,10 @@ struct VideoUrl: Mappable {
     
     init() {}
     
-    init?(map: Map) {
-        
-    }
+    init?(map: Map) {}
     
     mutating func mapping(map: Map) {
-        
+        mobile <- map ["mobile"]
+        tablet <- map ["tablet"]
     }
-    
 }

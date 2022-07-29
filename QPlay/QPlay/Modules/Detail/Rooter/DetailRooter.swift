@@ -7,10 +7,12 @@
 
 import Foundation
 import UIKit
+import AVKit
 
 protocol DetailRooterProtocol {
     func showDetail(game: Game)
-    func popDetail() 
+    func popDetail()
+    func presentVideo(with url: String)
 }
 
 class DetailRooter: DetailRooterProtocol {
@@ -27,5 +29,17 @@ class DetailRooter: DetailRooterProtocol {
     
     func popDetail() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func presentVideo(with url: String) {
+        guard let url = URL(string: url) else { return }
+        let avPlayer = AVPlayer(url: url)
+        
+        let avPlayerController = AVPlayerViewController()
+        avPlayerController.player = avPlayer
+        
+        navigationController.present(avPlayerController, animated: true) {
+            avPlayerController.player?.play()
+        }
     }
 }

@@ -72,11 +72,23 @@
                                                         <constraint firstAttribute="width" constant="15" id="aAX-OS-imM"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99x-E1-YlZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <action selector="playVideo:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0kz-ov-fBQ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" name="customPurple"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="99x-E1-YlZ" secondAttribute="bottom" id="Az6-yN-pHd"/>
+                                                <constraint firstAttribute="trailing" secondItem="99x-E1-YlZ" secondAttribute="trailing" id="NW1-JF-IgZ"/>
                                                 <constraint firstItem="NE2-rb-1XX" firstAttribute="centerX" secondItem="Gdb-KW-yNK" secondAttribute="centerX" id="Nad-j0-KSP"/>
+                                                <constraint firstItem="99x-E1-YlZ" firstAttribute="leading" secondItem="Gdb-KW-yNK" secondAttribute="leading" id="Of7-Ay-zW9"/>
                                                 <constraint firstAttribute="height" constant="40" id="QxS-zZ-ZCt"/>
+                                                <constraint firstItem="99x-E1-YlZ" firstAttribute="top" secondItem="Gdb-KW-yNK" secondAttribute="top" id="RLo-rB-YYn"/>
                                                 <constraint firstAttribute="width" constant="40" id="xo0-cz-dll"/>
                                                 <constraint firstItem="NE2-rb-1XX" firstAttribute="centerY" secondItem="Gdb-KW-yNK" secondAttribute="centerY" id="zzR-Pa-elM"/>
                                             </constraints>
@@ -126,6 +138,7 @@
                 <outlet property="containerPlayerButtonView" destination="Gdb-KW-yNK" id="WpG-hp-UO7"/>
                 <outlet property="containerView" destination="0jE-GB-4uL" id="70e-5r-AeF"/>
                 <outlet property="playImageView" destination="NE2-rb-1XX" id="438-py-4Dr"/>
+                <outlet property="playVideoButton" destination="99x-E1-YlZ" id="B0O-N1-GKM"/>
                 <outlet property="studio" destination="2v5-uu-ew9" id="1Bq-1c-TMd"/>
                 <outlet property="titleLabel" destination="eJx-jz-za4" id="7Qd-Ta-OUv"/>
             </connections>

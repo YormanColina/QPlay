@@ -11,6 +11,7 @@ import UIKit
 protocol DetailPresenterProtocol {
     func showModule(game: Game)
     func popDetail()
+    func playVideo(with url: String)
 }
 
 class DetailPresenter: DetailPresenterProtocol {
@@ -28,5 +29,9 @@ class DetailPresenter: DetailPresenterProtocol {
     
     func popDetail() {
         router.popDetail()
+    }
+    
+    func playVideo(with url: String) {
+        router.presentVideo(with: url)
     }
 }

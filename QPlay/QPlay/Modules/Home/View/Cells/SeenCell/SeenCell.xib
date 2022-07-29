@@ -49,12 +49,24 @@
                                     <constraint firstAttribute="width" constant="10" id="zGZ-TK-b4r"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaT-rI-JwE">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="gTV-IL-0wX" eventType="touchUpInside" id="z7P-93-MkX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="customPurple"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZaT-rI-JwE" secondAttribute="bottom" id="BXO-RQ-ohI"/>
+                            <constraint firstItem="ZaT-rI-JwE" firstAttribute="leading" secondItem="cSA-bV-6Kl" secondAttribute="leading" id="Gih-GB-oRw"/>
+                            <constraint firstItem="ZaT-rI-JwE" firstAttribute="top" secondItem="cSA-bV-6Kl" secondAttribute="top" id="LvH-Jf-UEK"/>
                             <constraint firstItem="WZ0-Rs-XtT" firstAttribute="centerY" secondItem="cSA-bV-6Kl" secondAttribute="centerY" id="P4F-Zg-zI8"/>
                             <constraint firstAttribute="height" constant="40" id="Zwb-Sm-2ca"/>
                             <constraint firstItem="WZ0-Rs-XtT" firstAttribute="centerX" secondItem="cSA-bV-6Kl" secondAttribute="centerX" id="by2-06-gJt"/>
+                            <constraint firstAttribute="trailing" secondItem="ZaT-rI-JwE" secondAttribute="trailing" id="fVY-gA-OdB"/>
                             <constraint firstAttribute="width" constant="40" id="slT-0o-klJ"/>
                         </constraints>
                     </view>

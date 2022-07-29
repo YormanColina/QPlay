@@ -15,6 +15,7 @@ protocol HomePresenterProtocol {
     func presentDetail(game: Game)
     func saveGameSenn(title: String)
     func seenGames() -> [String]
+    func playVideo(url: String)
 }
 
 
@@ -46,6 +47,10 @@ class HomePresenter: HomePresenterProtocol {
     
     func seenGames() -> [String] {
         return interactor.searchSeenGames()
+    }
+    
+    func playVideo(url: String) {
+        router.play(url: url)
     }
     
 }

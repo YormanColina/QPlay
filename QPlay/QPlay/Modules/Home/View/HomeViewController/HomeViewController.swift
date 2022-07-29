@@ -196,4 +196,8 @@ extension HomeViewController: CollectionCellProtocol {
         presenter.presentDetail(game: game)
         collectionView.reloadData()
     }
+    
+    func playVideo(url: String) {
+        presenter.playVideo(url: url)
+    }
 }
