@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vm-Yp-deq">
-                        <rect key="frame" x="0.0" y="30" width="50" height="24"/>
+                        <rect key="frame" x="0.0" y="30" width="320" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -117,6 +117,7 @@
                 <constraint firstItem="3nl-od-c5e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nkV-La-N97"/>
                 <constraint firstItem="dYb-SR-aIp" firstAttribute="leading" secondItem="C4n-FW-db9" secondAttribute="trailing" constant="10" id="qBK-Kh-NCx"/>
                 <constraint firstItem="OMa-SK-dyi" firstAttribute="leading" secondItem="3nl-od-c5e" secondAttribute="trailing" constant="10" id="rda-Yj-RYd"/>
+                <constraint firstItem="q5h-NF-SCA" firstAttribute="leading" secondItem="8vm-Yp-deq" secondAttribute="trailing" constant="30" id="zM6-qx-NrU"/>
             </constraints>
             <size key="customSize" width="400" height="215"/>
             <connections>

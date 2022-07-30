@@ -19,9 +19,13 @@ class GamesViewCell: UICollectionViewCell {
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var cellImage: UIImageView!
     @IBOutlet private weak var containerPlayerButtonView: UIView!
-    @IBOutlet weak var blurEfect: UIVisualEffectView!
-    @IBOutlet weak var playImageView: UIImageView!
-    @IBOutlet weak var playVideoButton: UIButton!
+    @IBOutlet private weak var blurEfect: UIVisualEffectView!
+    @IBOutlet private weak var playImageView: UIImageView!
+    @IBOutlet private weak var playVideoButton: UIButton!
+    @IBOutlet private weak var userImage1: UIImageView!
+    @IBOutlet private weak var userImage2: UIImageView!
+    @IBOutlet private weak var userImage3: UIImageView!
+    @IBOutlet private weak var userImage4: UIImageView!
     
     weak var delegate: GamesViewCellDelegate?
     private var url: String?
@@ -54,6 +58,26 @@ class GamesViewCell: UICollectionViewCell {
         playImageView.tintColor = .white
         playImageView.image = UIImage(named: "play")?.withRenderingMode(.alwaysTemplate)
         containerView.layer.mask = createMask()
+        
+        userImage1.layer.cornerRadius = userImage1.bounds.width / 2
+        userImage1.layer.borderColor = UIColor.white.cgColor
+        userImage1.layer.borderWidth = 0.5
+        userImage1.image = UIImage(named: "gente1")
+        
+        userImage2.layer.cornerRadius = userImage2.bounds.width / 2
+        userImage2.layer.borderColor = UIColor.white.cgColor
+        userImage2.layer.borderWidth = 0.5
+        userImage2.image = UIImage(named: "gente2")
+        
+        userImage3.layer.cornerRadius = userImage3.bounds.width / 2
+        userImage3.layer.borderColor = UIColor.white.cgColor
+        userImage3.layer.borderWidth = 0.5
+        userImage3.image = UIImage(named: "gente3")
+        
+        userImage4.layer.cornerRadius = userImage4.bounds.width / 2
+        userImage4.layer.borderColor = UIColor.white.cgColor
+        userImage4.layer.borderWidth = 0.5
+        userImage4.image = UIImage(named: "gente4")
     }
     
     func configureCell(game: Game) {

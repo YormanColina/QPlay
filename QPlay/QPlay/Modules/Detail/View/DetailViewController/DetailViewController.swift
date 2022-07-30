@@ -129,7 +129,9 @@ extension DetailViewController: UICollectionViewDataSource {
 }
 
 extension DetailViewController: UICollectionViewDelegate {
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+    }
 }
 
 extension DetailViewController: UICollectionViewDelegateFlowLayout {
