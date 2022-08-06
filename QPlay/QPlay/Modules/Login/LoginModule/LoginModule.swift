@@ -8,7 +8,11 @@
 import Foundation
 import UIKit
 
-class LoginModule {
+protocol LoginModuleProtocol {
+    func start()
+}
+
+class LoginModule: LoginModuleProtocol {
     let presenter: LoginPresenterProtocol
     
     init(navigation: UINavigationController) {

@@ -14,6 +14,7 @@
                 <outlet property="backButton" destination="lsZ-yW-Spc" id="k8l-XP-AKY"/>
                 <outlet property="backImageView" destination="Euw-17-xbL" id="cHi-YQ-Wh5"/>
                 <outlet property="collectionView" destination="rbK-Yk-Vou" id="Suz-RZ-sas"/>
+                <outlet property="containerViewHeigth" destination="hJy-ez-cyV" id="XpA-7J-Aj6"/>
                 <outlet property="containerViewOfCollection" destination="Kcp-AK-Hke" id="rHb-YF-Iwp"/>
                 <outlet property="detailImageView" destination="ohC-iY-ZWW" id="SbH-oo-Z3n"/>
                 <outlet property="playNowButton" destination="OyW-EQ-6W3" id="WVt-M8-iq0"/>
@@ -34,6 +35,9 @@
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rbK-Yk-Vou">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="458" id="xQx-N0-TsS"/>
+                            </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z24-EK-nuz">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>

@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 protocol DetailModuleProtocol {
     func startDetail(game: Game)
     var presenter: DetailPresenterProtocol { get }

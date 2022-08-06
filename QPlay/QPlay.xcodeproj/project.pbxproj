@@ -377,7 +377,6 @@
 				18F45C70286266A300069C8E /* Presenter */,
 				18F45C6F286266A000069C8E /* Interactor */,
 				18F45C6E2862669D00069C8E /* Router */,
-				18F45C6D2862669A00069C8E /* Entities */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -406,13 +405,6 @@
 				18F45C7B2862674E00069C8E /* Entities */,
 			);
 			path = Detail;
-			sourceTree = "<group>";
-		};
-		18F45C6D2862669A00069C8E /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		18F45C6E2862669D00069C8E /* Router */ = {

@@ -10,14 +10,16 @@ import Kingfisher
 import AVKit
 
 class DetailViewController: UIViewController {
-    
+    // MARK: IBOutlet
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var containerViewOfCollection: UIView!
     @IBOutlet private weak var detailImageView: UIImageView!
     @IBOutlet private weak var backButton: UIButton!
     @IBOutlet private weak var backImageView: UIImageView!
     @IBOutlet private weak var playNowButton: UIButton!
+    @IBOutlet weak var containerViewHeigth: NSLayoutConstraint!
     
+    // MARK: Properties
     private let presenter: DetailPresenterProtocol
     private let game: Game
     override func viewDidLoad() {
@@ -25,7 +27,8 @@ class DetailViewController: UIViewController {
         configureCollection()
         setupUI()
     }
-
+    
+    // MARK: Initializers
     init(presenter: DetailPresenterProtocol, game: Game) {
         self.presenter = presenter
         self.game = game
@@ -36,6 +39,7 @@ class DetailViewController: UIViewController {
         return nil
     }
     
+    // MARK: Methods
     private func configureCollection() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -67,6 +71,8 @@ class DetailViewController: UIViewController {
         
         playNowButton.layer.cornerRadius = 35
     }
+    
+    // MARK: IBActions
     @IBAction func playVideo(_ sender: Any) {
         print(game.videosUrls.tablet)
         presenter.playVideo(with: game.videosUrls.mobile)
@@ -97,6 +103,7 @@ extension DetailViewController: UICollectionViewDataSource {
             return descriptionCell
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderHomeView", for: indexPath) as? HeaderHomeView else {
             return UICollectionReusableView()
@@ -130,7 +137,6 @@ extension DetailViewController: UICollectionViewDataSource {
 
 extension DetailViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
     }
 }
 

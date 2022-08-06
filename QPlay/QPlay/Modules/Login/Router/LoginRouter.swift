@@ -5,7 +5,6 @@
 //  Created by Apple on 23/06/22.
 //
 
-import Foundation
 import UIKit
 import FirebaseAuth
 import GoogleSignIn
@@ -14,14 +13,12 @@ import RxSwift
 
 protocol LoginRouterProtocol {
     func presentLogin(presenter: LoginPresenterProtocol)
-    func showGoogleView(config: GIDConfiguration, viewController: UIViewController, completion: @escaping (GIDGoogleUser?) -> Void)
     func showGoogleViewRx(config: GIDConfiguration) -> Observable<GIDGoogleUser>
     func showModuleHome()
 }
 
 class LoginRooter: LoginRouterProtocol {
-    
-    var navigationController: UINavigationController
+    private let navigationController: UINavigationController
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -29,16 +26,6 @@ class LoginRooter: LoginRouterProtocol {
     
     func presentLogin(presenter: LoginPresenterProtocol) {
         navigationController.setViewControllers([LoginViewController(presenter: presenter)], animated: true)
-    }
-    
-    func showGoogleView(config: GIDConfiguration, viewController: UIViewController, completion: @escaping (GIDGoogleUser?) -> Void) {
-        GIDSignIn.sharedInstance.signIn(with: config, presenting: viewController) { user, _ in
-            guard let user = user else {
-                completion(nil)
-                return
-            }
-            completion(user)
-        }
     }
     
     func showModuleHome() {
@@ -52,17 +39,14 @@ class LoginRooter: LoginRouterProtocol {
                 observer.onError(RxError.noElements)
                 return Disposables.create()
             }
-            
             GIDSignIn.sharedInstance.signIn(with: config, presenting: viewController) { user, _ in
                 guard let user = user else {
                     observer.on(.error(RxError.noElements))
                     return
                 }
-                
                 observer.on(.next(user))
                 observer.on(.completed)
             }
-                                
             return Disposables.create()
         }
     }

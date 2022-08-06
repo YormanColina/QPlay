@@ -11,21 +11,18 @@ import RxSwift
 
 class LoginViewController: UIViewController {
     // MARK: IBOutlets
-    
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var facebookButtom: UIButton!
     @IBOutlet private weak var loginButtom: UIButton!
     @IBOutlet private weak var googleButtom: UIButton!
-    @IBOutlet weak var imageLogoGoogle: UIImageView!
-    @IBOutlet weak var imageFacebookLogo: UIImageView!
+    @IBOutlet private weak var imageLogoGoogle: UIImageView!
+    @IBOutlet private weak var imageFacebookLogo: UIImageView!
     
     // MARK: Properties
-    
     private let presenter: LoginPresenterProtocol
     private let disposeBag = DisposeBag()
     
     // MARK: Initializers
-    
     init(presenter: LoginPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: String(describing: LoginViewController.self), bundle: nil)
@@ -34,17 +31,16 @@ class LoginViewController: UIViewController {
     required init?(coder: NSCoder) {
         return nil
     }
-    
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         subscribeToAuthUser()
         setupUI()
     }
     
-    // MARK: Methods
-    
     private func subscribeToAuthUser() {
-        presenter.authObservable.subscribe(onNext: { result in
+        presenter.googleSignIn()
+            .subscribe(onNext: { result in
             if result {
                 self.presenter.presentHome()
             }
@@ -77,20 +73,16 @@ class LoginViewController: UIViewController {
         self.navigationItem.title = "Qplay"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
                                                                         NSAttributedString.Key.font: UIFont(name: "Arial Rounded MT Bold", size: 22)!]
-    
     }
     
-    
     //MARK: IBActions
-    
     @IBAction func login(_ sender: Any) {
-        presenter.googleSignInOperators()
+        presenter.googleSignIn()
             .subscribe(onNext: { (success) in
                 guard success else { return }
                 self.presenter.presentHome()
             }).disposed(by: disposeBag)
     }
-    
     
 }
 

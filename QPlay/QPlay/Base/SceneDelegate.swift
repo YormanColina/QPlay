@@ -18,13 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
        let rootNavigationController = UINavigationController()
         if GIDSignIn.sharedInstance.currentUser == nil {
-//            let loginModule = LoginModule(navigation: rootNavigationController)
-//            loginModule.start()
-            
+            let loginModule = LoginModule(navigation: rootNavigationController)
+            loginModule.start()
+        } else {
             let homeModule = HomeModule(base: rootNavigationController)
             homeModule.startHome()
-        } else {
-            
         }
         
         window = UIWindow(windowScene: windowScene)
