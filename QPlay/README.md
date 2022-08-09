@@ -23,3 +23,9 @@ Este proyecto esta estructurado con la arquitectuta VIPER, cada módulo tiene su
 - P restenter (El puente de conexion entre todas las partes de la arquitectura)
 - E ntity (Modelo de datos)
 - R outer (Maneja las transiciones entre modulos)
+
+# Como esta estructurado el proyecto
+
+- Qplay: Carpeta base del proyecto
+  -
+  
