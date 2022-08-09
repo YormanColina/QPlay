@@ -44,4 +44,6 @@ Este proyecto esta estructurado con la arquitectuta VIPER, cada módulo tiene su
 - pod install
 - open Qplay.xworkspace
 - command + R
+
+Nota, las imágenes estan tomadas desde un simulador de iphone 11, de preferencia escoger este simulador para correr la app
   
