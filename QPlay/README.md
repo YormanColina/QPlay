@@ -27,5 +27,12 @@ Este proyecto esta estructurado con la arquitectuta VIPER, cada módulo tiene su
 # Como esta estructurado el proyecto
 
 - Qplay: Carpeta base del proyecto
-  -
+    - Info
+    - GoogleService-Info
+    - Resources: Imagenes y colores
+    - Base: SceneDelegate, AppDelegate
+    - Modules
+        - Login: 
+        - Home: 
+        - Detail:
   
