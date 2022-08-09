@@ -1,3 +1,7 @@
+<div align='center'>
+<a href="url"><img src=
+
+
 # Descripcion
 
 Qplay es una aplicación que reproduce videos de videojuegos, permite al usuario hacer Login con su cuenta Google y Facebook, consta de 3 Modulos: Login, Home y Detail, la Home le permite al usuario selecionar el video que quiera y puede abrir la información del videojuego o reproducir el video de presentación del videojuego
