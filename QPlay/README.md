@@ -16,13 +16,14 @@ Qplay es una aplicación que reproduce videos de videojuegos, permite al usuario
 
 # Arquitectura
 
-Este proyecto esta estructurado con la arquitectuta VIPER, cada módulo tiene su arquitectura para el manejo de sus funciones y cada parte tiene sus responsabilidades definidas
+Este proyecto esta estructurado con la arquitectuta VIPER, cada módulo tiene su arquitectura para el manejo de sus funciones y cada parte tiene sus responsabilidades definidas, en esta ocasiòn implemente una extension de la arquitectura llamada Module
 
 - V iew (Se encarga unicamente de configurar la vista)
 - I nteractor (Contiene logica de negocio)
 - P restenter (El puente de conexion entre todas las partes de la arquitectura)
 - E ntity (Modelo de datos)
 - R outer (Maneja las transiciones entre modulos)
+- Module(extension) se encarga de crear el modulo
 
 # Como esta estructurado el proyecto
 
@@ -32,7 +33,7 @@ Este proyecto esta estructurado con la arquitectuta VIPER, cada módulo tiene su
     - Resources: Imagenes y colores
     - Base: SceneDelegate, AppDelegate
     - Modules
-        - Login: 
+        - Login: Se encarga de darle el ingreso al usuario a la aplicación mediante su cuenta de Google o su cuenta de Facebook y hace autenticación de el usuario que ingresó
         - Home: 
         - Detail:
   
