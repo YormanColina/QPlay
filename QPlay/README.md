@@ -36,4 +36,7 @@ Este proyecto esta estructurado con la arquitectuta VIPER, cada módulo tiene su
         - Login: Se encarga de darle el ingreso al usuario a la aplicación mediante su cuenta de Google o su cuenta de Facebook y hace autenticación de el usuario que ingresó
         - Home: Muestra una colleccion de vistas con los videojuegos, tiene una seccion de explorar todos los videojuegos y una seccion de los que ya se han visto, se pueden repoducir los videos directamente oprimiendo play
         - Detail: Muestra información del juego, el raiting que tiene, descripcion y da la opcion de reproducir el video
+
+# Como correr el proyecto
+
   
