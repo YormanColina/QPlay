@@ -3,16 +3,16 @@
 Qplay es una aplicación que reproduce videos de videojuegos, permite al usuario hacer Login con su cuenta Google y Facebook, consta de 3 Modulos: Login, Home y Detail, la Home le permite al usuario selecionar el video que quiera y puede abrir la información del videojuego o reproducir el video de presentación del videojuego
 
 # Librerias y Frameworks 
-- UIKit
-- RXSwift y RXCocoa
-- Firebase
-- GoogleSignIn
-- ObjectMappper
-- UserDefaults
-- Cocoapods
-- Alamofire
-- Kingfisher
-- AVKit
+- UIKit (Creación y configuración de vistas)
+- RXSwift y RXCocoa (Comunicación entre las partes de la arquitectura para el pase de información)
+- Firebase (Crear acceso a Google y Facebook)
+- GoogleSignIn (Acceso con cuenta Google)
+- ObjectMappper (Mapeo de información)
+- UserDefaults (Guarddar información en el dispositivo)
+- Cocoapods (Manejo de dependencias)
+- Alamofire (Consumo de API)
+- Kingfisher (descarga de imagenes)
+- AVKit (reproduccion de los videos)
 
 # Arquitectura
 
