@@ -39,4 +39,9 @@ Este proyecto esta estructurado con la arquitectuta VIPER, cada módulo tiene su
 
 # Como correr el proyecto
 
+- git clone git@github.com:YormanColina/QPlay.git
+- cd Qplay/
+- pod install
+- open Qplay.xworkspace
+- command + R
   
