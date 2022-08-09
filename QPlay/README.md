@@ -2,7 +2,7 @@
 <a href="url"><img src="https://github.com/YormanColina/QPlay/blob/main/QPlay/Resources/Login.png" align="leading" height=500></a>
 <a href="url"><img src="https://github.com/YormanColina/QPlay/blob/main/QPlay/Resources/Home.png" align="center" height=500></a>
 <a href="url"><img src="https://github.com/YormanColina/QPlay/blob/main/QPlay/Resources/Detail.png" align="trailing" height=500></a>
-
+</div>
 
 # Descripcion
 
